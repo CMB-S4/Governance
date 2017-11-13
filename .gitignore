@@ -1,0 +1,12 @@
+*.bbl
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.blg
+*.dvi
+*.toc
+.DS_Store
+bylaws.pdf
+membership.pdf
+publications.pdf
