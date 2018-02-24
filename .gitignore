@@ -7,6 +7,8 @@
 *.dvi
 *.toc
 .DS_Store
+*~
 bylaws.pdf
 membership.pdf
 publications.pdf
+key_science_topics_proposals.pdf

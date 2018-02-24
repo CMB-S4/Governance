@@ -1,4 +1,11 @@
-bylaws.pdf : bylaws.tex  membership.tex  publications.tex CMB-S4_Org_chart_+_details_v3.pdf
+all : bylaws.pdf key_science_topics_proposals.pdf
+
+bylaws.pdf : bylaws.tex  membership.tex  publications.tex CMB-S4_Org_chart_+_details_v6.pdf Election_cycle.png
+	pdflatex -halt-on-error $< 
+	pdflatex -halt-on-error $< 
+	pdflatex -halt-on-error $< 
+
+key_science_topics_proposals.pdf : key_science_topics_proposals.tex
 	pdflatex -halt-on-error $< 
 	pdflatex -halt-on-error $< 
 	pdflatex -halt-on-error $< 
