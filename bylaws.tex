@@ -8,20 +8,15 @@
 \usepackage[usenames, dvipsnames]{color}
 \usepackage{appendix}
 \usepackage{ulem}
-\usepackage{titling}
+\usepackage{ifthen}
+
+\newboolean{markup}
 
 \textheight = 522pt
 \textwidth = 450pt
 
 \oddsidemargin 0.0in
 
-
-\newcommand{\subtitle}[1]{%
-  \posttitle{%
-    \par\end{center}
-    \begin{center}\large#1\end{center}
-    \vskip0.5em}%
-}
 
 \newcommand{\Comment}[1]{\textcolor{Blue}{(Comment: #1)}}
 
@@ -39,7 +34,13 @@
 \newcommand\versionnumber{1.0}
 \newcommand\collabname{CMB-S4}
 
+
+
+
 \begin{document}
+\setboolean{markup}{false}
+\ifthenelse{\boolean{markup}}{\newcommand\markcolor{red}} {\newcommand\markcolor{black}}
+
 
 \title{\collabname\ Science Collaboration Bylaws \\ 
 \large{Version \versionnumber}}
@@ -49,6 +50,8 @@
 
 \vfill
 
+\ifthenelse{\boolean{markup}}{ 
+\textcolor{\markcolor}{\begin{center}{\Large MARKED-UP VERSION FOR REFERENCE}\end{center}} \vfill}{
 \begin{table}[h]
 %\caption{Version Control Table.  The version number is given as $X$.$Y$, where major amendments are indicated with  increments to $X$, while minor ones increment $Y$. }
 \begin{center}
@@ -64,7 +67,7 @@
 \end{center}
 \label{tab:version}
 \end{table}%
-
+}
 \thispagestyle{empty}
 
 \newpage
@@ -110,7 +113,7 @@ The \collabname\ Construction Project (the Project) is distinct from the \collab
 \vskip 12pt
 
 
-Throughout this document,  a ``supermajority vote" is defined as a result with more than two-thirds of the votes received in favor of  the motion. \textcolor{red}{``Supermajority votes'' require approval by two-thirds of the entire voting body.} A ``majority vote" requires that more than half the votes received are in favor of the motion.   A ``quorum" for a meeting is defined as the presence of a majority of a body's members.   For collaboration-wide votes, a ``Voting Member" is  defined as a Senior Member or a Postdoctoral Member (see \S\ref{sec:memberrights}). ``{\it Ex officio}" Members of a governance body are those whose membership is owing to their roles elsewhere in the Collaboration.  For example, the Science Council Chairs (\S\ref{sec:SC}) are {\it ex officio} Members of the Executive Team (\S\ref{sec:exec}).  In these bylaws,  ``Working Groups" are open to all Collaboration Members, and ``Councils" have multiple Working Groups reporting to them, while ``Committees" do not.  
+Throughout this document,  a ``supermajority vote" is defined as a result with more than two-thirds of the votes received in favor of  the motion. \textcolor{\markcolor}{``Supermajority votes'' require approval by two-thirds of the entire voting body.} A ``majority vote" requires that more than half the votes received are in favor of the motion.   A ``quorum" for a meeting is defined as the presence of a majority of a body's members.   For collaboration-wide votes, a ``Voting Member" is  defined as a Senior Member or a Postdoctoral Member (see \S\ref{sec:memberrights}). ``{\it Ex officio}" Members of a governance body are those whose membership is owing to their roles elsewhere in the Collaboration.  For example, the Science Council Chairs (\S\ref{sec:SC}) are {\it ex officio} Members of the Executive Team (\S\ref{sec:exec}).  In these bylaws,  ``Working Groups" are open to all Collaboration Members, and ``Councils" have multiple Working Groups reporting to them, while ``Committees" do not.  
 
  %The presence of a simple majority of a body's members constitutes quorum for a meeting, and two-thirds of a body must be present for a vote to be valid.
 
@@ -133,7 +136,8 @@ The governance structure of the \collabname\ Collaboration  is illustrated in Fi
 \section{Governing Board}
 
 The Governing Board (GB), a body whose composition is designed to be representative of the membership of the Collaboration as a whole, is the %ultimate 
-policy-forming body of the Collaboration.  Its other key role is oversight of the Spokespersons. {\color{red} \sout{and the \exec.}}
+policy-forming body of the Collaboration.  Its other key role is oversight of the Spokespersons.
+\ifthenelse{\boolean{markup}}{ {\color{\markcolor} \sout{and the \exec.}}}{}
 
 \subsection{Scope}
 %The Governing Board has two main roles: to facilitate discussion of collaboration-wide issues---especially those that concern the self-governance of the CMB-S4 Collaboration---and to provide oversight of the Spokespersons and the \exec. %and the co-Spokespersons.
@@ -150,8 +154,8 @@ Governing Board responsibilities include, but are not limited to:  %omitted "Col
 %\item Charging the Spokespersons with preparation of a yearly plan for the collaboration and the ratification of this plan. 
 
 \item Approval and revision of Collaboration Bylaws, including the Membership and Publication and Speakers policies.   
-\textcolor{red} {The currently ratified version of the Bylaws must be available on a public website.}
-Amendment of the Bylaws requires a supermajority of the GB.  Major changes (see \textcolor{red}{\S\ref{sec:amend}}) must be ratified by the Voting Members of the Collaboration.  %This excludes any Bylaws that directly pertain the power, scope, election, etc. of the GB, which will be discussed in Section \ref{subsec:amend}.
+\textcolor{\markcolor} {The currently ratified version of the Bylaws must be available on a public website.}
+Amendment of the Bylaws requires a supermajority of the GB.  Major changes (see \textcolor{\markcolor}{\S\ref{sec:amend}}) must be ratified by the Voting Members of the Collaboration.  %This excludes any Bylaws that directly pertain the power, scope, election, etc. of the GB, which will be discussed in Section \ref{subsec:amend}.
 
 
 %\item Oversight of the activities of the Spokespersons. The GB may require a detailed verbal, or written report from the Spokespersons on any action. 
@@ -165,12 +169,12 @@ Amendment of the Bylaws requires a supermajority of the GB.  Major changes (see 
 %\item Oversight of various collaboration subcommittees and councils including, but not
 %limited to: Elections, Membership, Publications, Science Council, Education and
 %Public Outreach, and the Junior Scientist Advancement Committee, through reports
-%from both the Spokespersons and \exec \ as well as other required duties spelled out in these Bylaws. \textcolor{red}{Keep or remove this? (E.g., Reading pubs section - the GB ratifies pub policy changes so it seems it would be good to clearly state that the GB might interact with these bodies.)}
+%from both the Spokespersons and \exec \ as well as other required duties spelled out in these Bylaws. \textcolor{\markcolor}{Keep or remove this? (E.g., Reading pubs section - the GB ratifies pub policy changes so it seems it would be good to clearly state that the GB might interact with these bodies.)}
 
 \item Approval of additional long-standing subcommittees.% as required. 
 This may include promotion of short-term subcommittees established by the Spokespersons to long-term status. 
 
-%\item \textcolor{red}{Ratification of changes to the Speakers/Publications Policy.}
+%\item \textcolor{\markcolor}{Ratification of changes to the Speakers/Publications Policy.}
 
 \end{itemize}
 
@@ -183,7 +187,7 @@ is two years for Senior Members and one year for the Postdoctoral Member; GB mem
 To ensure that the board is truly representative of the Collaboration, prior to each GB election,  the GB and the Spokespersons (or the ICCC for the first election) will particularly encourage suitable candidates from a broad range of 
 backgrounds to self-nominate  for GB membership.  Further details on the election of GB members is provided in  \S\ref{sec:gb-elections}.  
 
-%To ensure that the board is truly ``\textbf{representative}'' of the collaboration, prior to the election the GB---or the ICCC for first election---will define various categories of representation it is deemed important to include on the GB (possibly including e.g., ``Tenure Track" early career scientists,  historically underrepresented groups, partner countries with significant membership, members of small institutions, \textcolor{red}{representatives of existing CMB programs}, etc). Both the GB and spokespersons---or the ICCC for first election---should particularly encourage suitable candidates in each of these categories to self-nominate for GB  membership.
+%To ensure that the board is truly ``\textbf{representative}'' of the collaboration, prior to the election the GB---or the ICCC for first election---will define various categories of representation it is deemed important to include on the GB (possibly including e.g., ``Tenure Track" early career scientists,  historically underrepresented groups, partner countries with significant membership, members of small institutions, \textcolor{\markcolor}{representatives of existing CMB programs}, etc). Both the GB and spokespersons---or the ICCC for first election---should particularly encourage suitable candidates in each of these categories to self-nominate for GB  membership.
 
 
 
@@ -199,7 +203,8 @@ The Secretary of the GB is chosen informally by the GB Chair to serve during the
 
 
 \subsection{Governing Board Meetings}
-The first Governing Board will establish rules for its meetings after electing its Chair. This first meeting will be held no later than two months after the selection of the GB.  Agendas for scheduled meetings will be available to the full Collaboration in advance.  It is expected that the GB will meet no less than quarterly to ensure adequate attention to its duties. \textcolor{red}{Such meetings will occur approximately twice per year in closed session at every Collaboration meeting and additional meetings will be held by telephone or video conference.  \sout{Special meetings can be called on the initiative of the GB chair or at the request of another GB Member.} The GB Chair may call special meetings as needed.}  The Spokespersons are typically asked to attend GB meetings, with the exception of any Closed Executive Sessions during the meetings.  The GB Chair can invite other observers at their discretion. Each meeting requires a quorum to conduct official GB business. Two-thirds of the GB Members must cast votes directly or through proxies (including abstentions) for a vote to be valid.  
+The first Governing Board will establish rules for its meetings after electing its Chair. This first meeting will be held no later than two months after the selection of the GB.  Agendas for scheduled meetings will be available to the full Collaboration in advance.  It is expected that the GB will meet no less than quarterly to ensure adequate attention to its duties. \textcolor{\markcolor}{Such meetings will occur approximately twice per year in closed session at every Collaboration meeting and additional meetings will be held by telephone or video conference. 
+\ifthenelse{\boolean{markup}}{ \sout{Special meetings can be called on the initiative of the GB chair or at the request of another GB Member.} }{} The GB Chair may call special meetings as needed.} The Spokespersons are typically asked to attend GB meetings, with the exception of any Closed Executive Sessions during the meetings.  The GB Chair can invite other observers at their discretion. Each meeting requires a quorum to conduct official GB business. Two-thirds of the GB Members must cast votes directly or through proxies (including abstentions) for a vote to be valid.  
 GB votes can be held by email or other online method. Summaries of the GB meetings are distributed to the full Collaboration by the GB Chair or GB Secretary. These summaries must include meeting attendance and the %records of the votes cast by all GB Members.
 results of any votes taken.
  It is the expectation that GB Members participate in the majority of meetings. If a GB Member fails to participate %(via meeting attendance or email) 
@@ -213,16 +218,16 @@ The GB appoints the Chair and two additional members of the Election and Voting 
  The GB must inform the Collaboration of its decision to remove a Member from a leadership role within one working week after the vote to remove.  In the event of a removal of someone from an elected or appointed position, the GB may make an off-cycle appointment or hold a special election to fill the open position quickly, or wait until the next election cycle.  
 % A two-week collaboration-wide notice is required for a vote for removal and such a vote will be taken if at least half the GB members support such a proposal to the Chair. After the vote is taken the record of the vote (e.g., who voted and how) will be made available to the collaboration. In the event of a removal, the open position(s) will be filled following the procedures in these bylaws.
  
- 
-\subsection{\textcolor{red} {\sout{Amendments to the Bylaws (moved to \S\ref{sec:amend})}}}
+ \ifthenelse{\boolean{markup}}{
+\subsection{\textcolor{\markcolor} {\sout{Amendments to the Bylaws (moved to \S\ref{sec:amend})}}}
 %pertaining to the Governing Board} 
-\textcolor{red} {\sout{
+\textcolor{\markcolor} {\sout{
 \label{subsec:amend}
 The GB may make minor amendments to the Bylaws as needed.   The GB must  include a tracking cover page with the Bylaws that notes the document version history, including dates of amendments with short synopses of which sections were impacted.  The currently ratified version of the Bylaws must be available on a public website.  Each revised version must be made available to the Collaboration for review and comment for at least one month before the GB can move to ratify the amended Bylaws.  Ratification requires a supermajority of the GB.}}
 
-\textcolor{red} {\sout{
+\textcolor{\markcolor} {\sout{
 Major amendments to the Bylaws, including amendments pertaining to the election and scope of the GB itself,  must be ratified by the Collaboration.  The proposed amendments must be approved by a supermajority vote of the GB, and made available to the Collaboration for review and comment for at least one month.  After the review period, the Voting Members of the Collaboration can  ratify the amended Bylaws with a majority vote. }}
-
+}{}
 
 
 %For each revised version must be made available to the Collaboration for review and comment for at least one month before the GB can move to ratify the amended Bylaws.  Ratification requires a supermajority of the GB.
@@ -278,7 +283,7 @@ Spokespersons are elected to two-year terms. The election process is detailed in
 
 \subsection{Scope}
 
-The \exec \ (\shorte) is an elected and appointed board led by the Spokespersons. It consists of up to 10 members: the Spokespersons, the two elected co-Chairs of the Science Council, the two co-Chairs of the Technical Council, the Chair of the Membership Committee, the Chair of the Publication and Speakers Committee, and up to two members appointed by the Spokespersons. The ET is the agile decision-making body in the Collaboration with the ability to address the day-to-day collaboration issues.  \textcolor{red}{The \shorte\ is structured \sout{ The structure of the \shorte\ is}} to facilitate the flow of information to the Spokespersons from the Collaboration and vice versa, as well as to provide a sounding board for the Spokespersons.
+The \exec \ (\shorte) is an elected and appointed board led by the Spokespersons. It consists of up to 10 members: the Spokespersons, the two elected co-Chairs of the Science Council, the two co-Chairs of the Technical Council, the Chair of the Membership Committee, the Chair of the Publication and Speakers Committee, and up to two members appointed by the Spokespersons. The ET is the agile decision-making body in the Collaboration with the ability to address the day-to-day collaboration issues.  The \shorte\ is structured to facilitate the flow of information to the Spokespersons from the Collaboration and vice versa, as well as to provide a sounding board for the Spokespersons.
 
 The \exec \ has three main roles:
 \begin{itemize}
@@ -303,13 +308,14 @@ in a majority of meetings over a one-year period will be replaced in the nearest
 
 \section{Elections}\label{sec:elections}
 All elected positions of the major bodies in the CMB S4 Collaboration serve two-year terms (with the exception of the Postdoctoral Member on the GB, who serves a one-year term). Most positions have term limits.  Elections for % leadership roles 
-GB Members are  arranged so that $\sim 50\%$ of the members will be up for election each year.  As described in Appendix~\ref{app:first_election}, roughly half the initial terms will be for three years to allow for staggered terms to improve continuity.  {\color{red} \sout{Figure~2 displays the staggered terms schematically.}}  New appointments take office on July 1 in the year of their election.  
+GB Members are  arranged so that $\sim 50\%$ of the members will be up for election each year.  As described in Appendix~\ref{app:first_election}, roughly half the initial terms will be for three years to allow for staggered terms to improve continuity. 
+\ifthenelse{\boolean{markup}}{ {\color{\markcolor} \sout{Figure~2 displays the staggered terms schematically.}} }{} New appointments take office on July 1 in the year of their election.  
 
 %In this section of the bylaws the process and timing for each major election is described.  
 %Figure~\ref{fig:elect_cycle} displays schematically the timing of the election cycles described below.  
 
 As there are restrictions on the overlap of elected officials between various governing bodies, elections are timed to provide Collaboration Members multiple opportunities to participate in Collaboration governance. 
-In a given election year the ordering proceeds as follows: elections are held first for the Spokespersons\textcolor{red}{, as needed}. Next, elections are held for the Science Council co-Chairs, Membership Committee Chair and the Publication and Speakers Committee Chair, as needed.  A third election is held {\color{red} to fill available positions} for the Governing Board.
+In a given election year the ordering proceeds as follows: elections are held first for the Spokespersons\textcolor{\markcolor}{, as needed}. Next, elections are held for the Science Council co-Chairs, Membership Committee Chair and the Publication and Speakers Committee Chair, as needed.  A third election is held {\color{\markcolor} to fill available positions} for the Governing Board.
 Elections for positions outside the top levels of major bodies occur when required as such officials are not prohibited from serving other elected roles. 
 
 Each candidate provides a Candidate Statement to the EVC, which makes them available to the Collaboration via the \collabname\  internal web page prior to the balloting.   Votes are cast anonymously online by Voting Members, with the elections managed by the EVC, and timed to permit adequate time to evaluate the slates of nominees for each election and still assure the new appointments are able to take office on July 1.  The EVC, in consultation with the GB,  determines the detailed timing of the balloting and determines procedures for dealing with any election situations not anticipated in the Bylaws.
@@ -323,7 +329,7 @@ The procedures for conducting the initial elections of the Collaboration are giv
 %\begin{center}
 %\includegraphics[width=6.5in]{Election_cycle_v2.png}
 %\end{center}
-%\caption{\color{red} WILL REMOVE FIGURE AS IT IS NO LONGER NEEDED - AS MUCH OF THE STAGGERING HAS BEEN REMOVED \sout{CMB-S4 Election and appointment cycles. For the first election, $\sim\ 50$\% of the terms are for three years rather than the nominal two, to enable staggered elections/appointments going forward.}}
+%\caption{\color{\markcolor} WILL REMOVE FIGURE AS IT IS NO LONGER NEEDED - AS MUCH OF THE STAGGERING HAS BEEN REMOVED \sout{CMB-S4 Election and appointment cycles. For the first election, $\sim\ 50$\% of the terms are for three years rather than the nominal two, to enable staggered elections/appointments going forward.}}
 %\label{fig:elect_cycle}
 %\end{figure}
 
@@ -336,15 +342,17 @@ Spokespersons are elected to two-year terms. All Senior Members (see \S\ref{sec:
 %As a Co-spokesperson can not be a voting member of the GB, if 
 If a member of the GB is elected as a Spokesperson, they must resign their GB seat prior to the start of their Spokesperson term and this vacancy will be filled in the next GB election. 
 
-Prior to the election, Voting Members are asked to nominate individuals for Spokesperson to the Election and Voting Commission. Each Voting Member may nominate {\color{red} \sout{one}} candidates and self-nominations are accepted. %A minimum of two nominations is  required for a nominee to be eligible to appear on the slate of election candidates. 
+Prior to the election, Voting Members are asked to nominate individuals for Spokesperson to the Election and Voting Commission. Each Voting Member may nominate \ifthenelse{\boolean{markup}}{ {\color{\markcolor} \sout{one}}}{} candidates and self-nominations are accepted. %A minimum of two nominations is  required for a nominee to be eligible to appear on the slate of election candidates. 
 After a nomination period, the EVC consults with the nominees to ascertain their willingness to stand for the election.
-{\color{red} \sout{Each Voting Member votes for a single candidate for each open Spokesperson position.} 
+%{\color{\markcolor} \sout{Each Voting Member votes for a single candidate for each open Spokesperson position.} 
 
-A ranked voting scheme approved by the GB prior to the \sout{first} election \sout{after the collaboration is formed will be} is used to determine the Spokespersons. Elections are to be held sufficiently early such that new electees may interact with the current Spokespersons and \shorte\ for three months prior to taking office to ensure a smooth transition. \sout{may serve in ``observatory roles'' for three months prior to taking office.}}
-In the event of a tie \textcolor{red}{preventing selection of two Spokespersons}, a runoff election will be held  \textcolor{red}{to choose among the candidates with the same ranking.  \sout{between the two candidates that have the same number of votes. }}
+\textcolor{\markcolor} {A ranked voting scheme approved by the GB prior to the election %\sout{after the collaboration is formed will be} 
+is used to determine the Spokespersons.  Adoption of a ranked voting scheme that differs from that used during the previous election requires approval of a supermajority of the GB.  Elections are to be held sufficiently early such that new electees may interact with the current Spokespersons and \shorte\ for three months prior to taking office to ensure a smooth transition. %\sout{may serve in ``observatory roles'' for three months prior to taking office.}}
+In the event of a tie preventing selection of two Spokespersons, a runoff election will be held to choose among the candidates with the same ranking.} % \sout{between the two candidates that have the same number of votes. }}
 %The elected candidates will take office when the EVC announces the results of the election to the Collaboration via email. 
 
-\textcolor{red} {\sout{If needed, the GB will use its discretion to figure out what to do:  ``If no candidate agrees to stand for election, the terminating Spokesperson will continue to serve for six months, after which a special election will be held. The term of the individual elected in a special election will be reduced by the amount needed to cause the sum of their term and the additional months served by the terminating Spokesperson to equal two years."}}
+\ifthenelse{\boolean{markup}}{
+\textcolor{\markcolor} {\sout{If no candidate agrees to stand for election, the terminating Spokesperson will continue to serve for six months, after which a special election will be held. The term of the individual elected in a special election will be reduced by the amount needed to cause the sum of their term and the additional months served by the terminating Spokesperson to equal two years.}} }{}
 
 
 %The election is held through an on-line poll, with votes submitted by Voting Members. The EVC will preside over the election results. Each candidate will provide a Candidate Statement to the EVC, which will collect these documents and make them available to the Collaboration via the CMB-S4 internal web page prior to the balloting. The EVC, in consultation with the GB  determines the detailed timing of the balloting and determines procedures for dealing with any election situations not anticipated in the bylaws. Each Voting Member votes for a single candidate for each vacant position. %; in the first election, in which two Spokespersons will be selected, collaboration members may vote for two candidates. 
@@ -357,13 +365,16 @@ In the event of a tie \textcolor{red}{preventing selection of two Spokespersons}
 The co-Chairs of the Science Council, and the Chairs of the Membership Committee and the Publication and Speakers Committee are elected to two-year terms. All Senior Members (see \S\ref{sec:memtypes}) may  run for these positions.  If a Voting Member of the GB is elected to one of these positions, they must resign their GB seat prior to taking office as Chair, and this vacancy will be filled in the next GB election. 
 
 Prior to the election, Voting Members are asked to nominate individuals for the Chair positions to the EVC.   Self-nominations are accepted.
-After a nomination period, the EVC consults with the nominees to ascertain their willingness to stand for the election. \textcolor{red}{Candidates are only allowed to stand for one open position in a given election.
-\sout{Each Voting Member votes for a single candidate for each  open Committee  Chair position.} A ranked voting scheme approved by the GB prior to the \sout{first} election \sout{after the collaboration is formed will be} is used to determine the Science Council Co-chairs. \sout{Elections are to be held sufficiently early such that new electees may serve in ``observatory roles'' for three months prior to taking office.}}
-In the event of a tie, a runoff election will be held 
-\textcolor{red}{to choose among the candidates with the same ranking. 
-\sout{ between the two candidates that have the same number of votes.}} 
+After a nomination period, the EVC consults with the nominees to ascertain their willingness to stand for the election. \textcolor{\markcolor}{Candidates are only allowed to stand for one open position in a given election.  
+%\sout{Each Voting Member votes for a single candidate for each  open Committee  Chair position.}
+A ranked voting scheme approved by the GB prior to the election %\sout{after the collaboration is formed will be} 
+is used to determine the Science Council Co-chairs. Adoption of a ranked voting scheme that differs from that used during the previous election requires approval of a supermajority of the GB. 
+%\sout{Elections are to be held sufficiently early such that new electees may serve in ``observatory roles'' for three months prior to taking office.}}
+In the event of a tie, a runoff election will be held  to choose among the candidates with the same ranking. }
+%\sout{ between the two candidates that have the same number of votes.}} 
 
-\textcolor{red}{\sout{Removed for parity with the Spokesperson case:  If no candidate agrees to stand for election, the terminating Chair will continue to serve for six months, after which a special election will be held. The term of the individual elected in a special election will be reduced by the amount needed to cause the sum of their term and the additional months served by the terminating Chair to equal two years.}}
+\ifthenelse{\boolean{markup}}{
+\textcolor{\markcolor}{\sout{If no candidate agrees to stand for election, the terminating Chair will continue to serve for six months, after which a special election will be held. The term of the individual elected in a special election will be reduced by the amount needed to cause the sum of their term and the additional months served by the terminating Chair to equal two years.}}}{}
 
 
 \subsection{Governing Board}
@@ -374,15 +385,16 @@ The 18 GB Members drawn from the Senior Members of the Collaboration are elected
 The election for the Senior Members on the GB proceeds as follows. 
 Prior to the election, Voting Members are asked to nominate individuals for the GB to the EVC.   Self-nominations are accepted. After a nomination period, the EVC consults with the nominees to ascertain their willingness to stand for the election.
 %Each Voting Member votes for a single candidate for each vacant GB position.  % In the event of a tie for the last open position, a runoff election will be held between the two candidates that have the same number of votes. 
-\textcolor{red}{A ranked voting scheme approved by the GB prior to the election is used for the GB election.
- \sout{The EVC shall adopt a ranked voting system for the Governing Board election. The exact details of tis ranking scheme are to be determined by the EVC with approval of the Governing Board prior to the first Election after the collaboration is formed.}}
+\textcolor{\markcolor}{A ranked voting scheme approved by the GB prior to the election is used for the GB election.
+Adoption of a ranked voting scheme that differs from that used during the previous election requires approval of a supermajority of the GB. }
+% \sout{The EVC shall adopt a ranked voting system for the Governing Board election. The exact details of tis ranking scheme are to be determined by the EVC with approval of the Governing Board prior to the first Election after the collaboration is formed.}}
 
 %Every year, following completion of the Spokesperson election and any required \exec \ elections, the EVC then carries out elections for seats on the Governing Board whose term is expiring in less than 12 months. The EVC first solicits self-nominations for Governing Board membership and candidate information is then circulated to qualified electors as defined in the membership section of these bylaws. 
 %Electors vote via email, with the votes tabulated by the EVC members not standing for election (or, in cases where the whole committee is conflicted, by a third party appointed by the Co-Spokespersons). 
 %Each Voting Member may vote for up to 10 candidates, or fewer as mandated by the EVC.
 % of the total number of board members. 
 
-The election for the Postdoctoral Member of the GB follows the same procedure, with the exception that only \textcolor{red}{Postdoctoral Members are eligible to both nominate and vote for candidates for this position.} 
+The election for the Postdoctoral Member of the GB follows the same procedure, with the exception that only \textcolor{\markcolor}{Postdoctoral Members are eligible to both nominate and vote for candidates for this position.} 
 
 After the initial GB is established, it is to amend these Bylaws to establish whether to have separate votes different categories of representation on the GB or to continue with a mixed election/appointed governing board model as described in Appendix~\ref{app:first_election}. It is the expectation that the GB will evolve to be a fully elected body as the Collaboration matures.
 
@@ -406,10 +418,11 @@ are also described below.
 \subsection{Science Council and Analysis Working Groups}
 \label{sec:SC}
 
-The Science Council works closely with the Spokespersons to coordinate the key scientific objectives of the Collaboration.  The Science Council is led by two co-Chairs elected by the Voting Members of the Collaboration, who also serve as Members of the \exec.   \textcolor{red}{The Science Council chairs serve two-year terms and are limited to two consecutive terms with one year off required before standing again.}
+The Science Council works closely with the Spokespersons to coordinate the key scientific objectives of the Collaboration.  The Science Council is led by two co-Chairs elected by the Voting Members of the Collaboration, who also serve as Members of the \exec.   \textcolor{\markcolor}{The Science Council chairs serve two-year terms and are limited to two consecutive terms with one year off required before standing again.}
 The remaining members of the Science Council are the co-coordinators of the various Analysis Working Groups. These Working Groups are open to all Collaboration Members, and will be formally established by the Spokespersons.  
 
-The Science Council approves the projects that lead to publications and is responsible for maintaining a list of Key Science topics  (\S\ref{sec:pubprop}). \textcolor{red}{It is charged to work closely with the Spokespersons and the \shorte\ to produce a coherent plan for advancing the key science goals of the Collaboration. \sout{ ensure that the key science goals of the Collaboration are achieved.}}
+The Science Council approves the projects that lead to publications and is responsible for maintaining a list of Key Science topics  (\S\ref{sec:pubprop}). \textcolor{\markcolor}{It is charged to work closely with the Spokespersons and the \shorte\ to produce a coherent plan for advancing the key science goals of the Collaboration and to work towards the successful execution of this plan.}
+%\sout{ ensure that the key science goals of the Collaboration are achieved.}}
 
 Each Analysis Working Group will have two co-coordinators who  serve for two-year terms with the exception of one initial coordinator who will serve for a three-year term to enable staggered appointments in the future.  The Science Council Chairs will solicit self-nominations for these co-coordinator positions. The Spokespersons will appoint coordinators with the advice of the Science Council Chairs, and will consider the distribution of early and late career Members when making these appointments. Coordinators will ordinarily not serve back-to-back terms.
 
@@ -423,7 +436,9 @@ It is anticipated that the role of and/or the need for the Technical Council wil
 
 \subsection{Membership Committee}
 
-The Membership Committee (MC) consists of seven people including a Chair. The Chair is elected following the election cycle of the Collaboration with  two-year terms, and is limited to two consecutive terms with one year off required before standing again. \textcolor{red}{The six remaining members are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB. \sout{\shorte\ following approval of the slate of proposed members by the GB}  These members have the same term duration and limits as the elected Chair.} If a MC member leaves before their term is complete,  \textcolor{red}{the Spokespersons \sout{\shorte} will appoint a replacement to complete their term, subject to approval of the GB.}   MC members can be removed by a supermajority of the GB at any time.  
+The Membership Committee (MC) consists of seven people including a Chair. The Chair is elected following the election cycle of the Collaboration with  two-year terms, and is limited to two consecutive terms with one year off required before standing again. \textcolor{\markcolor}{The six remaining members are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB. %\sout{\shorte\ following approval of the slate of proposed members by the GB}  
+These members have the same term duration and limits as the elected Chair.} If a MC member leaves before their term is complete,  \textcolor{\markcolor}{the Spokespersons %\sout{\shorte} 
+will appoint a replacement to complete their term, subject to approval of the GB.}   MC members can be removed by a supermajority of the GB at any time.  
 
 
 The appointed members of the MC should represent the overall Collaboration, and there should be at least two members from the Technical Working Groups and two members from the Analysis Working Groups on the MC.  This balance may be amended as the scientific needs of the Collaboration evolve. % \Comment{This leaves two spots to encompass people who might not fall neatly into either group.}
@@ -433,7 +448,9 @@ The duties of the MC  are to review and evaluate membership applications, review
 
 \subsection{Publication and Speakers  Committee}
 \label{sec:pubcouncil}
-The Publication and Speakers Committee (PSC) consists of thirteen people including the Chair. The Chair is elected following the election cycle of the Collaboration with  two-year terms, and is limited to two consecutive terms with one year off required before standing again. There are two subcommittees which together comprise the PSC: the Publications Board with eight Collaboration Members and the Speakers Bureau with four Collaboration Members. \textcolor{red}{The Chair of the PSC chairs both subcommittees.} \textcolor{red}{The twelve non-elected committee members are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB.  \sout{\shorte\ following approval of the slate of proposed members by the GB} } The twelve appointed members serve with the same {\color{red} term duration and limits as the Chair.}  Roughly half of each group should be pre-tenure {\color{red} or the equivalent junior status for non-professorial positions}. If a PSC member leaves before their term is complete, \textcolor{red}{the Spokespersons \sout{ET} will appoint a replacement to complete their term, subject to approval of the GB.}  PSC members can be removed by a supermajority of the GB at any time.  
+The Publication and Speakers Committee (PSC) consists of thirteen people including the Chair. The Chair is elected following the election cycle of the Collaboration with  two-year terms, and is limited to two consecutive terms with one year off required before standing again. There are two subcommittees which together comprise the PSC: the Publications Board with eight Collaboration Members and the Speakers Bureau with four Collaboration Members. \textcolor{\markcolor}{The Chair of the PSC chairs both subcommittees.} \textcolor{\markcolor}{The twelve non-elected committee members are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB.}  %\sout{\shorte\ following approval of the slate of proposed members by the GB} } 
+The twelve appointed members serve with the same {\color{\markcolor} term duration and limits as the Chair.}  Roughly half of each group should be pre-tenure {\color{\markcolor} or the equivalent junior status for non-professorial positions}. If a PSC member leaves before their term is complete, \textcolor{\markcolor}{the Spokespersons %\sout{ET} 
+will appoint a replacement to complete their term, subject to approval of the GB.}  PSC members can be removed by a supermajority of the GB at any time.  
  
 
 
@@ -441,20 +458,22 @@ The Publication and Speakers Committee (PSC) consists of thirteen people includi
 
 \subsection{Junior Scientist Advancement Committee}
 
-The role of the Junior Scientist Advancement Committee (JSAC) is to ensure that junior members (defined as Student Members and Postdoctoral Members; see \S\ref{sec:memtypes}) within the Collaboration are represented, assisted, and supported throughout the  tenure of the Collaboration. This will include arranging mentors for junior members who desire mentorship, and facilitating junior member career advancement through relevant workshops and other activities. The JSAC Chair and Vice Chair are appointed by the \textcolor{red}{Spokespersons after consultation with the \shorte\ and subject to approval of the GB.  \sout{\shorte\ after the elections and} The Chair and Vice Chair}
-serve two-year terms that parallel the Collaboration election cycle. Membership on the JSAC is open to volunteers from the Collaboration, with the approval of the JSAC Chair. 
+The role of the Junior Scientist Advancement Committee (JSAC) is to ensure that junior members (defined as Student Members and Postdoctoral Members; see \S\ref{sec:memtypes}) within the Collaboration are represented, assisted, and supported throughout the  tenure of the Collaboration. This will include arranging mentors for junior members who desire mentorship, and facilitating junior member career advancement through relevant workshops and other activities. The JSAC Chair and Vice Chair are appointed by the \textcolor{\markcolor}{Spokespersons after consultation with the \shorte\ and subject to approval of the GB.  %\sout{\shorte\ after the elections and} 
+The Chair and Vice Chair} serve two-year terms that parallel the Collaboration election cycle. Membership on the JSAC is open to volunteers from the Collaboration, with the approval of the JSAC Chair. 
 
 
 \subsection{External Collaborators Committee}
 
-The role of the External Collaborators Committee (ECC) is to provide the necessary link to external follow-up observations or survey data that required to maximize the science return from \collabname. The ECC Chair and Vice Chair are appointed by the  \textcolor{red}{Spokespersons after consultation with the \shorte\ and subject to approval of the GB.  \sout{\shorte\ for two-year terms.} The Chair and Vice Chair serve two-year terms that parallel the Collaboration election cycle.} The Chair will appoint additional members as required to ensure adequate knowledge of the collaborations being pursued resides in the ECC. Self nominations for consideration for membership on the ECC are expected. 
+The role of the External Collaborators Committee (ECC) is to provide the necessary link to external follow-up observations or survey data that required to maximize the science return from \collabname. The ECC Chair and Vice Chair are appointed by the  \textcolor{\markcolor}{Spokespersons after consultation with the \shorte\ and subject to approval of the GB.  %\sout{\shorte\ for two-year terms.} 
+The Chair and Vice Chair serve two-year terms that parallel the Collaboration election cycle.} The Chair will appoint additional members as required to ensure adequate knowledge of the collaborations being pursued resides in the ECC. Self nominations for consideration for membership on the ECC are expected. 
 
 The committee drafts the necessary documents for external collaboration agreements and memoranda of understanding (MOUs). These are presented to the Spokespersons and the \shorte\ who have the authority to amend and alter the agreements and MOUs. The agreements are brought forward by the Spokespersons to the GB for final approval. %\Comment{This might also fall under Project management.}
 
 \subsection{Education and Outreach Committee}
 
-The Education and Public Outreach (EPO) Committee is responsible for initiating, overseeing, and recording the Collaboration's efforts in the areas of public outreach and education. Its mission is to disseminate Collaboration results to the public and increase general scientific literacy. The committee is overseen by the \exec \ and members are appointed by the  \textcolor{red}{Spokespersons \sout{\shorte}} after solicitation of nominations from the full Collaboration \textcolor{red}{ and after consultation with the \shorte.}
- The Chair is appointed by the Spokespersons \textcolor{red}{ after consultation with the \shorte.}  Terms on the EPO Committee are for two years, with some initial three-year terms to allow staggered appointments.   A presentation of EPO efforts and written documentation of activities must be provided to the \shorte\ at each Collaboration meeting or when requested by the \shorte. 
+The Education and Public Outreach (EPO) Committee is responsible for initiating, overseeing, and recording the Collaboration's efforts in the areas of public outreach and education. Its mission is to disseminate Collaboration results to the public and increase general scientific literacy. The committee is overseen by the \exec \ and members are appointed by the  \textcolor{\markcolor}{Spokespersons %\sout{\shorte}
+} after solicitation of nominations from the full Collaboration \textcolor{\markcolor}{ and after consultation with the \shorte.}
+ The Chair is appointed by the Spokespersons \textcolor{\markcolor}{ after consultation with the \shorte.}  Terms on the EPO Committee are for two years, with some initial three-year terms to allow staggered appointments.   A presentation of EPO efforts and written documentation of activities must be provided to the \shorte\ at each Collaboration meeting or when requested by the \shorte. 
 
 \section{Membership Policy}
 
@@ -480,7 +499,7 @@ Five types of members are defined here.
 \item {\bf Student Member:} A graduate student working with a Senior Member at their institution can be designated as a Student Member by that Senior Member.  We do not anticipate granting membership to students who are not supervised by a Senior Member.
 
 
-\item\textcolor{red}{ {\bf Provisional Member:}  A Provisional Member has not yet been approved for
+\item\textcolor{\markcolor}{ {\bf Provisional Member:}  A Provisional Member has not yet been approved for
 Senior, Postdoctoral or Student Member status.  This status applies to all new Student and Postdoctoral Members
 (including, for example, those in an existing Senior Member's group) as well as potential Senior Members.  This is intended to be a temporary status, typically a year, allowing the Provisional Member to demonstrate
 sufficient constructive engagement with the Collaboration.
@@ -514,7 +533,7 @@ Herein, ``Members'' refers to Senior, Postdoctoral, Student and Provisional Memb
 
  Members must commit effort to approved infrastructure tasks.   
 The Membership Committee will work with the \exec\ to define and recommend infrastructure tasks that need filling, 
-\textcolor{red}{ and to define and communicate with Members the level of expected effort.}
+\textcolor{\markcolor}{ and to define and communicate with Members the level of expected effort.}
 Tasks can include,  for example, designing, building, and testing software, hardware, or simulations; contributing to commissioning and observations; and management tasks. 
 Just as for the hardware, we anticipate having a collaboration-wide architecture for the software.  Thus, Members are expected to comply with interface, documentation and code review requirements in support of the goals of the Collaboration.   Other ways of contributing include taking on roles in the governance, including membership on the GB, EVC, ET, or the Councils and Committees described in \S\ref{sec:councils}.
 
@@ -563,12 +582,13 @@ The membership status of each member will be reviewed by the Membership Committe
 
 \item Members leaving the Collaboration may be granted Legacy Membership upon review by the Membership Committee and approval by the GB.
 
- \item  \textcolor{red} {\sout{If the effort of any member over the previous year seems lacking, the Membership Committee will bring this to the attention of the Spokespersons and the GB.  This can also be done at any time, should the Membership Committee deem the actions of a member to have been egregious and detrimental to \collabname.}}
+\ifthenelse{\boolean{markup}}{
+ \item  \textcolor{\markcolor} {\sout{If the effort of any member over the previous year seems lacking, the Membership Committee will bring this to the attention of the Spokespersons and the GB.  This can also be done at any time, should the Membership Committee deem the actions of a member to have been egregious and detrimental to \collabname.}}}{}
 
 \item The Governing Board has the authority to grant or terminate all forms of membership.
 
 
-\item \textcolor{red}{If the effort of any Member appears insufficient, the Membership Committee will consult with the Spokespersons to develop a plan to remedy the situation.  If needed, the Spokespersons will work with the Membership Committee to prepare a recommendation to the GB for corrective action, including suspension or termination of membership.   This can also be done should the Membership Committee deem the actions of a Member to have been egregious and detrimental to the Collaboration. }
+\item \textcolor{\markcolor}{If the effort of any Member appears insufficient, the Membership Committee will consult with the Spokespersons to develop a plan to remedy the situation.  If needed, the Spokespersons will work with the Membership Committee to prepare a recommendation to the GB for corrective action, including suspension or termination of membership.   This can also be done should the Membership Committee deem the actions of a Member to have been egregious and detrimental to the Collaboration. }
 
 
 \item When a person's membership in the Collaboration ends, they will no longer have access to the \collabname\ document and database repository, internal forums, computing resources and data.  Authorship rights will continue, or not, as prescribed in the Publication Policy bylaws.
@@ -594,14 +614,14 @@ The Publication Policy will apply to all projects and publications that employ C
 engineering designs, and analysis pipelines. All Collaboration members agree to the publication policy upon joining, and to be bound by it for two years after leaving the Collaboration.
 %All Collaboration members agree to the publication policy upon joining, and if they leave the Collaboration, they are bound by it for two years afterward.
 
-{\color{red} 
+{\color{\markcolor} 
 The Publication and Speakers Committee will continue to refine the policy, and present a revision one year after the establishment of the Collaboration for ratification by its Voting Members.
 }
 
 \subsection{Organization}
 The execution of the policy shall be overseen by the Publication and Speakers Committee and its subcommittees (\S\ref{sec:pubcouncil}). 
-{\color{red} The Science Council (\S\ref{sec:SC}) approves all projects that lead to publications.
-Also, in carrying out its duty to produce a coherent plan for advancing the Collaboration's key science goals, the Science Council establishes a slate of project categories and solicits the Working Groups for detailed proposals. \sout{  The Science Council in addition establishes a slate of projects categories that advance the Collaboration's key science goals, and it solicits the Working Groups for detailed proposals for carrying out these projects, producing a coherent plan.} 
+{\color{\markcolor} The Science Council (\S\ref{sec:SC}) approves all projects that lead to publications.
+Also, in carrying out its duty to produce a coherent plan for advancing the Collaboration's key science goals, the Science Council establishes a slate of project categories and solicits the Working Groups for detailed proposals. %\sout{  The Science Council in addition establishes a slate of projects categories that advance the Collaboration's key science goals, and it solicits the Working Groups for detailed proposals for carrying out these projects, producing a coherent plan.} 
 This is done in consultation with the ET and in accordance with the Spokespersons' yearly plan.}
 The Spokespersons will help to navigate and resolve potential conflicts.
 The Membership Committee will keep track of active Collaboration members and Legacy Members for the purposes of establishing author lists for papers.
@@ -642,7 +662,7 @@ For the purposes of authorship, ``Active Members'' consist of Senior, Postdoctor
 \begin{enumerate}
 \item For Key Project papers, all Active Members of the Collaboration and all Legacy Members will automatically be placed on the author list.  The author list will start with ``The \collabname\ Collaboration'' and otherwise be alphabetical, unless the Publication Board agrees that the paper should be submitted to a journal which requires the first author to be an individual.  In that case, the author list will be alphabetical.
   The Membership Board will provide the current list of eligible Active and Legacy Members to the Publication Board.
-  {\color{red} Anyone who chooses to opt out of authorship for a given Key Project paper must  notify the Publication Board.}
+  {\color{\markcolor} Anyone who chooses to opt out of authorship for a given Key Project paper must  notify the Publication Board.}
 \item For non-key project papers, the author list will be two-tiered.
 %  The first tier will typically consist of untenured (or equivalent) members of the project team, ordered according to their preference.  (The publication panel can allow exceptions for senior scientists in the first tier in rare cases when justified by their contribution.)
   Project teams may organize the first author tier as appropriate for the paper, and although not required, conventionally the tenured members of the project team will appear in the second, alphabetical tier of authors.
@@ -694,30 +714,36 @@ The role of the Speakers Bureau is to help Collaboration members give more and b
 \item Solicit invitations to conferences and identify good venues for contributed talks.
 \item Actively solicit speakers for invitations to notable conferences with no volunteer speakers. Priority and consideration should be given to the teams from projects where alphabetical author lists may obscure their roles. 
 \item Promptly respond to requests for speakers from conference organizers and act as a point-of-contact for people who want some \collabname\ speaker but do not have specific ideas.
-\item {\color{red} Serve as a clearinghouse for talk invitations forwarded from any member.}
+\item {\color{\markcolor} Serve as a clearinghouse for talk invitations forwarded from any member.}
 \item Curate a library of standard plots and slides for speakers to use in talks.
-\item {\color{red}Maintain records of all presentation given in the name of the Collaboration} and a library of past \collabname\  talks.
+\item {\color{\markcolor}Maintain records of all presentation given in the name of the Collaboration} and a library of past \collabname\  talks.
 \item Address overlap from multiple requests to give talks on the same subject at the same conference, ideally by suggesting focus changes to make them on different topics. Talk prioritization will be at the committee's best judgment, but should reflect contributions to the topic in question, career status, whether the speaker was invited, and other similar factors.
 \end{itemize}
 
 
-{\color{red}
-Any Collaboration Member invited to give a talk primarily focused on \collabname, e.g., on the instrument, projections or science results, at a conference or workshop must forward that request upon receipt and before acceptance to the Speakers Bureau.  The Speakers Bureau will work with the invited Member to determine whether the invited Member should reply to the request with the suggestion that a more appropriate Member be invited to give the talk. In their deliberations, the Speakers Bureau and invited Member should consider
+{\color{\markcolor}
+Any Collaboration Member invited to give a talk with a substantial component focused on \collabname, (e.g., on the instrument, projections or science results) at a conference or workshop must forward that request upon receipt and before acceptance to the Speakers Bureau.  The Speakers Bureau will work with the invited Member to determine whether the invited Member should reply to the request with the suggestion that a more appropriate Member be invited to give the talk. In their deliberations, the Speakers Bureau and invited Member should consider
 the contributions of various members to the collaboration, the desire to promote junior members, and the fair distribution of opportunities to give talks.
-\sout{Any member invited to give a talk at a conference or workshop must forward that request, upon receipt, to the Speakers Bureau.  The Speakers Bureau will determine whether an alternate person is more appropriate to give the talk considering the contributions of various members to the collaboration, the desire to promote junior members, and the fair distribution of opportunities to give talks.}
+%\sout{Any member invited to give a talk at a conference or workshop must forward that request, upon receipt, to the Speakers Bureau.  The Speakers Bureau will determine whether an alternate person is more appropriate to give the talk considering the contributions of various members to the collaboration, the desire to promote junior members, and the fair distribution of opportunities to give talks.}
 
+%\textcolor{blue}{
+For approved conference and workshop talks, Collaboration Members must send abstracts and titles to the Speakers Bureau to allow them to be posted at least three days prior to submission, or as soon as possible in the event of last-minute invitations. For these talks, slides must be sent to the Speakers Bureau to allow them to be posted at least one week before being presented and should include ``for the \collabname\ Collaboration" on the title slide. %}
 
-To give talks not in the above category, a Collaboration member must also notify the Speakers Bureau. This ensures that the Speakers Bureau has a chance to address overlapping talk requests or locate another appropriate speaker in the case of declined invitations.  The talks policy applies to all workshops, meetings, colloquia, public lectures, and seminars.  The Speakers Bureau need not be informed of talks on other subjects that contain brief advertisements for \collabname\  or of invited presentations that must remain confidential for programmatic reasons (e.g.~certain agency reviews or presentations to private foundations or donors).
+%\textcolor{blue}{
+For talks not in the above category, such as workshop or conference talks without a substantial component on \collabname, or colloquia or seminars, Collaboration Members should also notify the Speakers Bureau of the 
+invitations. %} 
+% \textcolor{\markcolor}{ \sout{To give talks not in the above category, a Collaboration member must also notify the Speakers Bureau.}} 
+This ensures that the Speakers Bureau has a chance to address overlapping talk requests or locate another appropriate speaker in the case of declined invitations.  The talks policy applies to all workshops, meetings, colloquia, public lectures, and seminars.  The Speakers Bureau need not be informed of talks on other subjects that contain brief advertisements for \collabname\  or of invited presentations that must remain confidential for programmatic reasons (e.g.~certain agency reviews or presentations to private foundations or donors).
 
 %Final public oral presentations for thesis student have greater flexibility and may show unreleased data, but it is the responsibility of the student and advisor to maintain confidentiality of results.
 
-Collaboration members must send abstracts and titles to the Speakers Bureau at least three days prior to submission, or as soon as possible in the event of last-minute invitations. Slides must be sent to the Collaboration at least one week before being presented and should include ``for the \collabname\ Collaboration" on the title slide.
+%\sout{REWORDED AND MOVED EARLIER:  Collaboration members must send abstracts and titles to the Speakers Bureau at least three days prior to submission, or as soon as possible in the event of last-minute invitations. Slides must be sent to the Collaboration at least one week before being presented and should include ``for the \collabname\ Collaboration" on the title slide.}
 
-All talks must maintain confidentiality for the project's results.
-Any unpublished results shown in talks must be approved for public release by the Science Council before being shown. Such results should be marked ``\collabname\ PRELIMINARY'' on slides until publication.
-\sout{Pre-approved results do not require re-approval from the collaboration for separate talks, although the Speakers Bureau still needs to be notified about the talk.}
+%\textcolor{blue}{
+All talks must maintain confidentiality of the project's results. \collabname\ results not approved for public release by the Science Council cannot be used in a presentation. To request approval for any such material, the speaker must submit the proposed slides to the Speakers Bureau at least one week in advance. Such results must be marked ``\collabname\ PRELIMINARY" on each slide. Results from any slide that has received Science Council approval can be re-used for other presentations without the need to have them re-approved. %}
+%\textcolor{\markcolor}{\sout{Any unpublished results shown in talks must be approved for public release by the Science Council before being shown. Such results should be marked ``\collabname\ PRELIMINARY'' on slides until publication. Pre-approved results do not require re-approval from the collaboration for separate talks, although the Speakers Bureau still needs to be notified about the talk.}}
 
-\sout{The Speakers Bureau will maintain records of all presentations given in the name of the Collaboration, and serve as a clearinghouse for talk invitations forwarded from any member. {\bf NB This last paragraph effectively moved to bullets at beginning of this section.}}
+%\sout{The Speakers Bureau will maintain records of all presentations given in the name of the Collaboration, and serve as a clearinghouse for talk invitations forwarded from any member. {\bf NB This last paragraph effectively moved to bullets at beginning of this section.}}
 }
 
 \subsection{Violations of the Policy and Remedies}
@@ -726,11 +752,12 @@ Violations of the policy will be addressed by the Publication Board, which will 
 
 \section{Ombudspersons}
 
-\collabname\ has two Ombudspersons who are available to members of the Collaboration.\footnote{This section is drawn from the LSST DESC Code of Conduct which is licensed under Creative Commons CC0 1.0 \url{https://creativecommons.org/publicdomain/zero/1.0/}} The role of the Ombudspersons is to provide informal, confidential, nonjudgmental, impartial, and independent advice and arrange mediation for \collabname\ members for the purposes of dispute resolution. Confidentiality is a privilege of the Ombudspersons and the only circumstances in which there may be an exception to confidentiality is if the Ombudsperson is concerned by an imminent risk of serious harm, or is required by law in the applicable jurisdiction to anonymously report credible evidence of fraud, waste, or abuse concerning the use of government funds. As such, communications with an Ombudsperson do not constitute formal notice to the Collaboration or the individual's institute. If the individual would like to start formal proceedings, the Ombudsperson can provide guidance on the \collabname\ process and referrals for institutional processes. The \collabname\ process for formal complaints is  \textcolor{red}{to be outlined in a \collabname\ Code of Conduct which will be drafted following the formation of the Collaboration}. There are two \collabname\ Ombudspersons to provide a choice of whom to speak with, and to ensure that there is at least one Ombudsperson available at Collaboration meetings. The Ombudspersons are available to \collabname\ members who are experiencing conflicts or disputes as part of their \collabname\ activities. The Ombudspersons will work together with the members who consult them to identify options for managing and resolving disputes and conflicts. This includes providing advice and support, referring individuals to appropriate resources, organizing informal mediation, and ensuring that the \collabname\ Spokespersons are made aware of any systemic issues in the Collaboration. 
+\collabname\ has two Ombudspersons who are available to members of the Collaboration.\footnote{This section is drawn from the LSST DESC Code of Conduct which is licensed under Creative Commons CC0 1.0 \url{https://creativecommons.org/publicdomain/zero/1.0/}} The role of the Ombudspersons is to provide informal, confidential, nonjudgmental, impartial, and independent advice and arrange mediation for \collabname\ members for the purposes of dispute resolution. Confidentiality is a privilege of the Ombudspersons and the only circumstances in which there may be an exception to confidentiality is if the Ombudsperson is concerned by an imminent risk of serious harm, or is required by law in the applicable jurisdiction to anonymously report credible evidence of fraud, waste, or abuse concerning the use of government funds. As such, communications with an Ombudsperson do not constitute formal notice to the Collaboration or the individual's institute. If the individual would like to start formal proceedings, the Ombudsperson can provide guidance on the \collabname\ process and referrals for institutional processes. The \collabname\ process for formal complaints is  \textcolor{\markcolor}{to be outlined in a \collabname\ Code of Conduct which will be drafted following the formation of the Collaboration}. There are two \collabname\ Ombudspersons to provide a choice of whom to speak with, and to ensure that there is at least one Ombudsperson available at Collaboration meetings. The Ombudspersons are available to \collabname\ members who are experiencing conflicts or disputes as part of their \collabname\ activities. The Ombudspersons will work together with the members who consult them to identify options for managing and resolving disputes and conflicts. This includes providing advice and support, referring individuals to appropriate resources, organizing informal mediation, and ensuring that the \collabname\ Spokespersons are made aware of any systemic issues in the Collaboration. 
 
 The Ombudspersons serve two-year terms, with the option of renewal. Due consideration will be given to the diversity of the candidates when the Ombudspersons are selected. The Ombudspersons will be full members of \collabname, with a strong understanding of the organizational structure of the Collaboration. They do not hold any other leadership positions within the Collaboration and report only to the \shorte. They must become members of the International Ombudsman Association (IOA) and familiarize themselves with the extensive materials available on their website. \url{https://www.ombudsassociation.org}
 
-{\color{red} \sout{\collabname\ has chosen to adopt the role and function of the Ombudsperson as expressed by the International Ombudsman Association (with some additions and edits for gender neutrality:  \url{https://www.ombudsassociation.org/Resources/Frequently-Asked-Questions/What-is-anOrganizational-Ombudsman}}}
+\ifthenelse{\boolean{markup}}{
+{\color{\markcolor} \sout{\collabname\ has chosen to adopt the role and function of the Ombudsperson as expressed by the International Ombudsman Association (with some additions and edits for gender neutrality:  \url{https://www.ombudsassociation.org/Resources/Frequently-Asked-Questions/What-is-anOrganizational-Ombudsman}}}}{}
 
 \subsection{Role}
 
@@ -766,19 +793,20 @@ Ombudsperson candidates will be self-nominated.  The Ombudspersons will be selec
 
 \section{Amendments to Bylaws}
 \label{sec:amend}
-These Bylaws may be amended by the GB. \textcolor{red} {Amendments may be presented for consideration to the GB at one of its regularly scheduled meetings by one or both Spokespersons or any GB member.
-\sout{A new bylaw or an amendment may be presented to the GB at one of its regularly scheduled meetings for consideration. Amendments may be introduced by any GB member or by a spokesperson.}
+These Bylaws may be amended by the GB. \textcolor{\markcolor} {Amendments may be presented for consideration to the GB at one of its regularly scheduled meetings by one or both Spokespersons or any GB member.
+\ifthenelse{\boolean{markup}}{
+\sout{A new bylaw or an amendment may be presented to the GB at one of its regularly scheduled meetings for consideration. Amendments may be introduced by any GB member or by a spokesperson.} }{}
 The GB  classifies proposed amendments as minor (e.g., rewordings to clarify ambiguous text, editing to improve readability, or changes to capture operational details of elections, meetings, or appointments) or major (e.g. amendments pertaining to the scope and composition of the GB itself).  The Spokespersons approve the initial classification and may reclassify minor amendments as major after the Collaboration review period described below.}
 
-\textcolor{red}{
+\textcolor{\markcolor}{
 %The GB may make minor amendments to the Bylaws as needed.   
 The GB must  maintain a tracking cover page with the Bylaws that notes the document version history, including dates of amendments with short synopses of which sections were impacted.  Proposed amendments must be approved by a supermajority vote of the GB, and made available to the Collaboration for review and comment for at least one month.  
 For minor amendments, the GB can  ratify the revised Bylaws after the review period with a supermajority vote. Major amendments to the Bylaws must be ratified by the Collaboration. After the review period, the Voting Members of the Collaboration can  ratify the amended Bylaws with a majority vote. }
 
-
-\textcolor{red} {\sout{
+\ifthenelse{\boolean{markup}}{
+\textcolor{\markcolor} {\sout{
 These bylaws may be amended by the GB. A new bylaw or an amendment may be presented to the GB at one of its regularly scheduled meetings for consideration. Amendments may be introduced by any GB member or by a spokesperson. Proposed amendments will be distributed by email to the entire Collaboration for their comments following this meeting. The GB will then consider the amendment for adoption at the next scheduled GB meeting. Approval of an amendment requires a super-majority vote of the GB members present. Additionally, approval of bylaws pertaining to the governance of the Governing Board also require approval of  {\it a majority of voting eligible Collaboration members.}
-}}
+}}}{}
 
 
 
@@ -795,22 +823,22 @@ These bylaws may be amended by the GB. A new bylaw or an amendment may be presen
 For the initial election procedures the ICCC takes the role of the GB, and an Interim Election and Voting Commission (IEVC) appointed by the ICCC conducts the elections and voting.  
 
 The elected candidates begin to serve immediately after the elections are completed. The ends of their terms are determined by adding the lengths of the nominal terms for their positions (one, two or three years) to June 30, 2018. 
-\textcolor{red}{As is directed for elections once the Collaboration is established, the initial elections are sequenced to provide Collaboration Members multiple opportunities to participate in Collaboration governance. }
+\textcolor{\markcolor}{As is directed for elections once the Collaboration is established, the initial elections are sequenced to provide Collaboration Members multiple opportunities to participate in Collaboration governance. }
 
 \subsection{Spokespersons} 
-The IEVC follows the election process \textcolor{red} {for the Spokespersons}  described in \S\ref{sec:elections} of the Bylaws.  \textcolor{red}{\sout{ Collaboration members may vote for two candidates.} A ranked voting scheme to be approved by the ICCC prior to the election will be used to determine the Spokespersons. 
-The first Spokesperson terms are three years in duration (not including the time prior to June 30, 2018). \sout{ to enable staggered leadership elections with the other members of the Executive Team in future elections.} }
+The IEVC follows the election process \textcolor{\markcolor} {for the Spokespersons}  described in \S\ref{sec:elections} of the Bylaws.  \textcolor{\markcolor}{   %\sout{ Collaboration members may vote for two candidates.} 
+A ranked voting scheme to be approved by the ICCC prior to the election will be used to determine the Spokespersons.  The first Spokesperson terms are three years in duration (not including the time prior to June 30, 2018). }% \sout{ to enable staggered leadership elections with the other members of the Executive Team in future elections.} }
 %, with the candidate with the highest vote total selected for a three-year term to enable staggered terms for the co-Spokespersons as illustrated in Figure~\ref{fig:elect_cycle}.
 
 \subsection{Council and Committee Chairs}
-\textcolor{red}{The first terms of the co-Chairs of the Science Council, and the Chairs of the Membership Committee and the Publication and Speakers Committee are two years in duration (not including the time prior to June 30, 2018). 
+\textcolor{\markcolor}{The first terms of the co-Chairs of the Science Council, and the Chairs of the Membership Committee and the Publication and Speakers Committee are two years in duration (not including the time prior to June 30, 2018). 
 The IEVC follows the election process described in \S\ref{sec:elections} of the Bylaws for these four Chairs.
-\sout{All Senior Members (see \S\ref{sec:memtypes}) may  run for these positions.  Prior to the election, Voting Members are asked to nominate individuals for the Chair positions to the IEVC.   Self-nominations are accepted. After a nomination period, the IEVC will consult with the nominees to ascertain their willingness to stand for the election. Candidates are only allowed to stand for one open position.} 
-A ranked voting scheme approved by the ICCC prior to the election will be used to determine the Science Council co-Chairs. For the Committee Chairs each Voting Member votes for a single candidate for each open Chair position. In the event of a tie, a runoff election will be held between the \sout{two} candidates that have the same number of votes. }
+%\sout{All Senior Members (see \S\ref{sec:memtypes}) may  run for these positions.  Prior to the election, Voting Members are asked to nominate individuals for the Chair positions to the IEVC.   Self-nominations are accepted. After a nomination period, the IEVC will consult with the nominees to ascertain their willingness to stand for the election. Candidates are only allowed to stand for one open position.} 
+A ranked voting scheme approved by the ICCC prior to the election will be used to determine the Science Council co-Chairs.  For the Committee Chairs each Voting Member votes for a single candidate for each open Chair position. In the event of a tie, a runoff election will be held between the \sout{two} candidates that have the same number of votes. }
 
 
 \subsection{Governing Board}
-\textcolor{red}{The IEVC follows the election process \textcolor{red} {for the GB members} described in \S\ref{sec:elections} of the Bylaws, with the modification that the ICCC approves the ranked voting scheme.  Additionally,} prior to the first election, the ICCC will define various categories of representation it deems important to include on the GB (possibly including, e.g., tenure-track and early career scientists,  historically underrepresented groups, members from partner countries with significant membership, members of small institutions, representatives of existing CMB programs, etc.). For the first election, the top 10 vote-receiving candidates are automatically selected for the GB. If the representation requirements outlined above are unfulfilled by the elected candidates, the remaining open seats are filled via total votes cast until seats are needed to ensure representation requirements are met. At this juncture the  ICCC is empowered to make appointments for the remaining seats to meet these requirements, drawing from the list of nominated candidates. 
+\textcolor{\markcolor}{The IEVC follows the election process \textcolor{\markcolor} {for the GB members} described in \S\ref{sec:elections} of the Bylaws, with the modification that the ICCC approves the ranked voting scheme.  Additionally,} prior to the first election, the ICCC will define various categories of representation it deems important to include on the GB (possibly including, e.g., tenure-track and early career scientists,  historically underrepresented groups, members from partner countries with significant membership, members of small institutions, representatives of existing CMB programs, etc.). For the first election, the top 10 vote-receiving candidates are automatically selected for the GB. If the representation requirements outlined above are unfulfilled by the elected candidates, the remaining open seats are filled via total votes cast until seats are needed to ensure representation requirements are met. At this juncture the  ICCC is empowered to make appointments for the remaining seats to meet these requirements, drawing from the list of nominated candidates. 
 To enable offset elections (to ensure an element of continuity in the GB), 50\% of the first GB members will serve three-year terms as determined by random draw. 
 
 After the GB is established, it is to amend these bylaws to establish whether to have separate votes for each category of representation or to continue with a mixed election/appointed model for its board members. It is the expectation that the GB will evolve to a fully elected body as the Collaboration matures. 
