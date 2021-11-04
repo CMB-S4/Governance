@@ -31,29 +31,29 @@
 %% Now actually use the newly defined style.
 \urlstyle{leo}
 
-\newcommand\versionnumber{1.5}
+\newcommand\versionnumber{1.7}
 \newcommand\collabname{CMB-S4}
 
-
-\newcommand{\revision}[1]{\textcolor{Red}{#1}}
-\newcommand{\revtwo}[1]{\textcolor{Emerald}{#1}}
-\newcommand{\revthree}[1]{\textcolor{Orange}{#1}}
 
 
 
 \begin{document}
-\setboolean{markup}{false}
-%\setboolean{markup}{true}
+%\setboolean{markup}{false}
+\setboolean{markup}{true}
 \ifthenelse{\boolean{markup}}{\newcommand\markcolor{red}} {\newcommand\markcolor{black}}
 
 
 \title{\collabname\ Science Collaboration Bylaws \\ 
 \large{Version \versionnumber}}
 %\subtitle{Version \versionnumber}
-\date{Feb 2, 2021}
+\date{Aug 3, 2021}
 \maketitle
 
+\vfill
 
+\ifthenelse{\boolean{markup}}{ 
+  \textcolor{\markcolor}{\begin{center}{\Large DRAFT AMENDMENT 006\\ MARKED-UP VERSION FOR REFERENCE}\end{center}} \vfill}{}
+       
 \begin{table}[h]
 %\caption{Version Control Table.  The version number is given as $X$.$Y$, where major amendments are indicated with  increments to $X$, while minor ones increment $Y$. }
 \begin{center}
@@ -67,7 +67,9 @@
 1.2 & Amendment to Section 9.1 to extend deadline for creation of publication policy & 02/12/2019 & 03/13/2019\\  \hline % Make the empty  boxes double tall here only to illustrate revisions may come)
 1.3 & Amendments to Sections 8.1, 8.4, and 8.6 of the CMB-S4 Bylaws, regarding postdoc membership & 03/04/2019 & 05/16/2019 \\ \hline
 1.4 & Amendments to Section 6, 6.3 on GB elections, deletion of Appendix A (First election procedures) & 03/06/2020 & 04/20/2020 \\ \hline
-1.5 & Amendments to Section 9 regarding the speakers and publication policies & 03/06/2020 & 02/05/2021 \\ \hline
+1.5 & Out for ratification, changes not included here &  &  \\ \hline
+1.6 & Amendments to S8.4 for the transition from Postdoctoral to Senior membership, revises``Intended Senior Membership Status" & 01/21/2021 & \\ \hline
+1.7 & Amendments to S2,3,6,7,10 to address minor inconsistencies and extend GB attendance requirements to account for extenuating circumstances & 08/03/2021 & \\ 
 
 & & & \\
 & & &\\ \hline
@@ -75,6 +77,8 @@
 \end{center}
 \label{tab:version}
 \end{table}%
+
+
 
 \thispagestyle{empty}
 
@@ -132,12 +136,14 @@ Throughout this document,  a ``supermajority vote" is defined as a result with m
 \section{Overall Structure}
 The governance structure of the \collabname\ Collaboration  is illustrated in Figure~\ref{fig:org_chart}.  The Governing Board (GB) provides oversight to an \exec\ (ET) led by two equal co-Spokespersons.  A number of Councils, Committees and Working Groups carry out necessary work to enable the overall science objectives of the Collaboration. The overall scope, selection of, and interplay among these governance entities is described in the remainder of this document. 
 
+\textcolor{\markcolor}{Throughout this document, when referring to ``major bodies'', we intend: major body 1, major body 2, .., major body N. Those entities not explicitly mentioned in the former list are intended as ``minor bodies''. Note that this distinction only serves to the purpose of defining the duration of corresponding elected positions.} \Comment{agree on definition of major bodies.}
+
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=6.5in]{CMB-S4_Org_chart_+_details_v10.pdf}
 \end{center}
-\caption{\collabname\ Collaboration Organizational Chart}
+\caption{\collabname\ Collaboration Organizational Chart. \textcolor{\markcolor}{To be modified so as to reflect distinction between major and minor bodies, see Sec.2.}}
 \label{fig:org_chart}
 \end{figure}
 
@@ -173,7 +179,7 @@ Amendment of the Bylaws requires a supermajority of the GB.  Major changes (see 
 
 \item Organization of elections for Spokespersons, GB Members, and other elected Collaboration officials (see \S\ref{sec:elections}).  
 
-\item Removal of any Collaboration Member from an elected or appointed leadership role in the event of major failings of professional conduct, or gross insufficiency of performance.  Removal requires a supermajority vote of the GB.   Leadership roles include, but are not limited to, the Spokespersons, GB members, \shorte\ members, and Council and Committee members and chairs.  %See also \S\ref{sec:removal}).
+\item Removal of any Collaboration Member from an elected or appointed leadership role in the event of major failings of professional conduct, or gross insufficiency of performance. \Comment{should we add a reference to the CoC and extend the motivations for removal to non-professional motivations?} Removal requires a supermajority vote of the GB.   Leadership roles include, but are not limited to, the Spokespersons, GB members, \shorte\ members, and Council and Committee members and chairs.  %See also \S\ref{sec:removal}).
 
 %\item Oversight of various collaboration subcommittees and councils including, but not
 %limited to: Elections, Membership, Publications, Science Council, Education and
@@ -222,8 +228,8 @@ The GB Chair may call special meetings as needed. The Spokespersons are typicall
 Each meeting requires a quorum to conduct official GB business. Except where a supermajority vote is required, a motion will carry if more than half of the entire GB membership votes in favor of the motion. GB Members may cast votes directly or by proxy. GB votes can be held by email or other online method.
 Summaries of the GB meetings are distributed to the full Collaboration by the GB Chair or GB Secretary. These summaries must include meeting attendance and the %records of the votes cast by all GB Members.
 results of any votes taken.
- It is the expectation that GB Members participate in the majority of meetings. If a GB Member fails to participate %(via meeting attendance or email) 
- in $\ge 50\%$ of GB meetings in a year, their seat will be open to election during the following cycle and they will be barred from the board for a two-year term.  
+It is the expectation that GB Members participate in the majority of meetings \textcolor{\markcolor}{($\ge 50\%$). However, individual GB members are allowed to request a reduction of the attendance requirement due to extenuating circumstances (e.g., including but not limited to unfriendly time zones, family leave, parental leave, medical leave). The request can be made to the GB Chair and Vice Chair of the GB. They can determine whether to approve the request and may consult with others if they choose to.} If a GB Member fails to participate %(via meeting attendance or email) 
+ \sout{in $\ge 50\%$ of} \textcolor{\markcolor}{in the agreed number} of GB meetings in a year, their seat will be open to election during the following cycle and they will be barred from the board for a two-year term.  
 
 \subsection{Election and Voting Commission}
 The GB appoints the Chair and two additional members of the Election and Voting Commission (EVC).  The EVC is charged with conducting elections as spelled out in \S\ref{sec:elections}. The EVC acts independently of the GB, but any points of substantive disagreement amongst the EVC members should be referred back to the GB.  Commission members serve two-year terms ordinarily.  However, the GB may choose to extend the first term of the Chair to  three years, to allow staggering of the membership for improved continuity between commissions.   Commission members may be removed with a supermajority vote of the GB.
@@ -397,7 +403,7 @@ In the event of a tie, a runoff election will be held  to choose among the candi
 \subsection{Governing Board}
 \label{sec:gb-elections}
 
-The 18 GB Members drawn from the Senior Members of the Collaboration are elected to two-year terms.  All Senior Members may  run for these positions. The one GB Member drawn from the Postdoctoral Members of the Collaboration is elected for a one-year term. Prior to each election, the current GB will define various representation requirements that it deems important to include on the GB (possibly including, e.g., tenure-track and early career scientists,  historically underrepresented groups, members from partner countries with significant membership, members of small institutions, representatives of existing CMB programs, etc.); no more than 50\% of the open seats on the board in an election can be reserved for such requirements.
+The 18 GB Members drawn from the Senior Members of the Collaboration are elected to two-year terms. \textcolor{\markcolor}{Elections for GB Members are arranged so that 50\% of the members will be up for election each year.}  All Senior Members may  run for these positions. The one GB Member drawn from the Postdoctoral Members of the Collaboration is elected for a one-year term. Prior to each election, the current GB will define various representation requirements that it deems important to include on the GB (possibly including, e.g., tenure-track and early career scientists,  historically underrepresented groups, members from partner countries with significant membership, members of small institutions, representatives of existing CMB programs, etc.); no more than 50\% of the open seats on the board in an election can be reserved for such requirements.
 
 The election for the Senior Members on the GB proceeds as follows. 
 Prior to the election, Voting Members are asked to nominate individuals for the GB to the EVC.   Self-nominations are accepted. After a nomination period, the EVC consults with the nominees to ascertain their willingness to stand for the election. A ranked voting scheme approved by the GB prior to the election is used for the GB election. Adoption of a ranked voting scheme that differs from that used during the previous election requires approval of a supermajority of the GB. The EVC will synthesize the voting results to provide a ranked list of all the candidates to the GB. 
@@ -456,7 +462,7 @@ It is anticipated that the role of and/or the need for the Technical Council wil
 
 \subsection{Membership Committee}
 
-The Membership Committee (MC) consists of seven people including a Chair. The Chair is elected following the election cycle of the Collaboration with  two-year terms, and is limited to two consecutive terms with one year off required before standing again. The six remaining members are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB. %\sout{\shorte\ following approval of the slate of proposed members by the GB}  
+The Membership Committee (MC) consists of seven people including a Chair. The Chair is elected following the election cycle of the Collaboration with  two-year terms, and is limited to two consecutive terms with one year off required before standing again. The six remaining members are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB. \textcolor{\markcolor}{Appointment of MC members is arranged so that 50\% of these roles are staggered.} %\sout{\shorte\ following approval of the slate of proposed members by the GB}  
 These members have the same term duration and limits as the elected Chair. If a MC member leaves before their term is complete, the Spokespersons 
 will appoint a replacement to complete their term, subject to approval of the GB.   MC members can be removed by a supermajority of the GB at any time.  
 
@@ -468,7 +474,7 @@ The duties of the MC  are to review and evaluate membership applications, review
 
 \subsection{Publication and Speakers  Committee}
 \label{sec:pubcouncil}
-The Publication and Speakers Committee (PSC) consists of thirteen people including the Chair. The Chair is elected following the election cycle of the Collaboration with  two-year terms, and is limited to two consecutive terms with one year off required before standing again. There are two subcommittees which together comprise the PSC: the Publications Board with eight Collaboration Members and the Speakers Bureau with four Collaboration Members. The Chair of the PSC chairs both subcommittees. The twelve non-elected committee members are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB.  %\sout{\shorte\ following approval of the slate of proposed members by the GB} } 
+The Publication and Speakers Committee (PSC) consists of thirteen people including the Chair. The Chair is elected following the election cycle of the Collaboration with  two-year terms, and is limited to two consecutive terms with one year off required before standing again. There are two subcommittees which together comprise the PSC: the Publications Board with eight Collaboration Members and the Speakers Bureau with four Collaboration Members. The Chair of the PSC chairs both subcommittees. The twelve non-elected committee members are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB. \textcolor{\markcolor}{Appointment of MC members is arranged so that 50\% of these roles are staggered.} %\sout{\shorte\ following approval of the slate of proposed members by the GB} } 
 The twelve appointed members serve with the same term duration and limits as the Chair. Roughly half of each group should be pre-tenure or the equivalent junior status for non-professorial positions. If a PSC member leaves before their term is complete, the Spokespersons
 will appoint a replacement to complete their term, subject to approval of the GB. PSC members can be removed by a supermajority of the GB at any time.  
  
@@ -479,20 +485,20 @@ will appoint a replacement to complete their term, subject to approval of the GB
 \subsection{Junior Scientist Advancement Committee}
 
 The role of the Junior Scientist Advancement Committee (JSAC) is to ensure that junior members (defined as Student Members and Postdoctoral Members; see \S\ref{sec:memtypes}) within the Collaboration are represented, assisted, and supported throughout the  tenure of the Collaboration. This will include arranging mentors for junior members who desire mentorship, and facilitating junior member career advancement through relevant workshops and other activities. The JSAC Chair and Vice Chair are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB.  %\sout{\shorte\ after the elections and} 
-The Chair and Vice Chair serve two-year terms that parallel the Collaboration election cycle. Membership on the JSAC is open to volunteers from the Collaboration, with the approval of the JSAC Chair. 
+The Chair and Vice Chair serve two-year terms that parallel the Collaboration election cycle \textcolor{\markcolor}{and are limited to two consecutive terms with one year off required before standing again.} Membership on the JSAC is open to volunteers from the Collaboration, with the approval of the JSAC Chair, \textcolor{\markcolor}{after solicitation of nominations from the full Collaboration}. \textcolor{\markcolor}{JSAC members serve for two-year terms. Consecutive terms are allowed.} \Comment{Do we need to set a limit to the number of JSAC members?}
 
 
 \subsection{External Collaborators Committee}
 
-The role of the External Collaborators Committee (ECC) is to provide the necessary link to external follow-up observations or survey data that required to maximize the science return from \collabname. The ECC Chair and Vice Chair are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB.  %\sout{\shorte\ for two-year terms.} 
-The Chair and Vice Chair serve two-year terms that parallel the Collaboration election cycle. The Chair will appoint additional members as required to ensure adequate knowledge of the collaborations being pursued resides in the ECC. Self nominations for consideration for membership on the ECC are expected. 
+The role of the External Collaborators Committee (ECC) is to provide the necessary link to external follow-up observations or survey data that required to maximize the science return from \collabname. The ECC Chair and Vice Chair are appointed by the Spokespersons after consultation with the \shorte\ and subject to approval of the GB. %\sout{\shorte\ for two-year terms.} 
+The Chair and Vice Chair serve two-year terms that parallel the Collaboration election cycle \textcolor{\markcolor}{and are limited to two consecutive terms with one year off required before standing again.} The Chair will appoint additional members as required to ensure adequate knowledge of the collaborations being pursued resides in the ECC. Self nominations for consideration for membership on the ECC are expected \textcolor{\markcolor}{after solicitation of nominations from the full Collaboration}. 
 
 The committee drafts the necessary documents for external collaboration agreements and memoranda of understanding (MOUs). These are presented to the Spokespersons and the \shorte\ who have the authority to amend and alter the agreements and MOUs. The agreements are brought forward by the Spokespersons to the GB for final approval. %\Comment{This might also fall under Project management.}
 
 \subsection{Education and Outreach Committee}
 
 The Education and Public Outreach (EPO) Committee is responsible for initiating, overseeing, and recording the Collaboration's efforts in the areas of public outreach and education. Its mission is to disseminate Collaboration results to the public and increase general scientific literacy. The committee is overseen by the \exec \ and members are appointed by the Spokespersons after solicitation of nominations from the full Collaboration and after consultation with the \shorte.
- The Chair is appointed by the Spokespersons after consultation with the \shorte.  Terms on the EPO Committee are for two years, with some initial three-year terms to allow staggered appointments.   A presentation of EPO efforts and written documentation of activities must be provided to the \shorte\ at each Collaboration meeting or when requested by the \shorte. 
+ The Chair is appointed by the Spokespersons after consultation with the \shorte. \textcolor{\markcolor}{and are limited to two consecutive terms with one year off required before standing again.} \sout{Terms on the EPO Committee are for two years, with some initial three-year terms to allow staggered appointments.} \textcolor{\markcolor}{EPO members serve for two-year terms. Consecutive terms are allowed.}  A presentation of EPO efforts and written documentation of activities must be provided to the \shorte\ at each Collaboration meeting or when requested by the \shorte. 
 
 \section{Membership Policy}
 
@@ -567,13 +573,14 @@ After the Collaboration is formed with a first set of initial members (see \S\re
 
 \begin{itemize}
 
-\item Potential Senior Members will apply for Provisonal Membership via a written application where they specify their proposed work on \collabname.
+\item Potential Senior Members will apply for Provisonal Membership via a written application where they specify their proposed work on \collabname. \textcolor{red}{Applicants who have already made significant contributions to CMB-S4, either as a postdoctoral member or as a non-member, may be recommended for non-provisional (regular) Senior membership by the Membership Committee.}
+
 
 \item % Independent postdocs not co-located with a Senior Member can apply for Postdoctoral Membership and have their application reviewed on a case-by-case basis.
 % Amendment 003 5/16/19
 Potential Independent Postdocs can apply for Postdoctoral Membership and have their applications reviewed on a case-by-case basis.
   
-\item Postdoctoral members can apply for ``Intended Senior Membership Status," which would convey that the postdoc will have Senior Membership status when preparing to move to a specified permanent appointment or an appointment that, under normal circumstances, can be expected to be renewed indefinitely.  The Membership Committee will decide the requirements for achieving this status, the achievement of which grants Senior Membership at the new institution.
+\item \sout{Postdoctoral members can apply for ``Intended Senior Membership Status," which would convey that the postdoc will have Senior Membership status when preparing to move to a specified permanent appointment or an appointment that, under normal circumstances, can be expected to be renewed indefinitely.  The Membership Committee will decide the requirements for achieving this status, the achievement of which grants Senior Membership at the new institution.}\textcolor{red}{Postdoctoral members can request “intended senior membership status” when applying to permanent positions by submitting a proposed research plan to the Membership Committee. If approved, they can request a letter from the Spokespersons describing their relationship to CMB-S4 to include in their application packages, or to pass to their letter writers.  Intended senior members who successfully transition to a permanent position are expected to follow the normal application process for provisional senior membership.} 
 
 \item Applications are reviewed by the Membership Committee. The Membership Committee recommends membership to the Governing Board.  The Governing Board approves membership.
 
@@ -634,7 +641,7 @@ Each Senior Member and each Independent Postdoc will submit an annual activity r
 \section{Publication and Speakers Policy}
 \label{sec:pub}
 \subsection{Principles}
-This policy seeks to ensure an equitable distribution of credit for work in the \collabname\ Collaboration, to encourage and incentivize active work by Collaboration members, and to guarantee that the resulting publications are of high quality. The authorship policy of the American Physical Society (2002) states: \textit{``Authorship should be limited to those who have made a significant contribution to the concept, design, execution or interpretation of the research study. All those who have made significant contributions should be offered the opportunity to be listed as authors.''}\footnote{\url{https://www.aps.org/policy/statements/02_2.cfm}}
+This policy seeks to ensure an equitable distribution of credit for work in the \collabname\ Collaboration, to encourage and incentivize active work by Collaboration members, and to ensure the resulting publications are of high quality. The authorship policy of the American Physical Society (2002) states: \textit{``Authorship should be limited to those who have made a significant contribution to the concept, design, execution or interpretation of the research study. All those who have made significant contributions should be offered the opportunity to be listed as authors.''}\footnote{\url{https://www.aps.org/policy/statements/02_2.cfm}}
 
 The Publication Policy will apply to all projects and publications that employ Collaboration resources, including unreleased data, simulation codes and products, hardware and software
 engineering designs, and analysis pipelines. All Collaboration members agree to the publication policy upon joining, and to be bound by it for two years after leaving the Collaboration.
@@ -643,11 +650,13 @@ engineering designs, and analysis pipelines. All Collaboration members agree to 
 
 %The Publication and Speakers Committee will continue to refine the policy, and present a revision one year after the establishment of the Collaboration for ratification by its Voting Members.
 % Amendment 002, ratified 3/13/19
+The Publication and Speakers Committee will continue to refine the policy, and present a revision no later than March 1, 2020 for ratification by the Voting Members of the Collaboration.  
+
 
 \subsection{Organization}
 The execution of the policy shall be overseen by the Publication and Speakers Committee and its subcommittees (\S\ref{sec:pubcouncil}). 
-The Science Council (\S\ref{sec:SC}), with input from technical and project committees, has authority to approve projects that may lead to publications or other products.
-Also, in carrying out its duty to produce a coherent plan for advancing the Collaboration's key science goals, the Science Council shall establish a slate of project categories and solicit the Working Groups for detailed proposals.
+The Science Council (\S\ref{sec:SC}) approves all projects that lead to publications.
+Also, in carrying out its duty to produce a coherent plan for advancing the Collaboration's key science goals, the Science Council establishes a slate of project categories and solicits the Working Groups for detailed proposals. %\sout{  The Science Council in addition establishes a slate of projects categories that advance the Collaboration's key science goals, and it solicits the Working Groups for detailed proposals for carrying out these projects, producing a coherent plan.} 
 This is done in consultation with the ET and in accordance with the Spokespersons' yearly plan.
 The Spokespersons will help to navigate and resolve potential conflicts.
 The Membership Committee will keep track of active Collaboration members and Legacy Members for the purposes of establishing author lists for papers.
@@ -659,27 +668,25 @@ The Membership Committee will keep track of active Collaboration members and Leg
 
 %\Comment{[Ed. note: The entire concept of ``Key Science'' papers is up for discussion, but only bits are highlighted below to avoid making the whole paragraph red.  Such a concept (under various names) is employed is many collaborations.  At the very end, we place possible suggestions for ``Key" topics.]}
 
-Any Collaboration member may propose a Collaboration research project to an appropriate Analysis Working Group or Technical Working Group by contacting the working group coordinators.  If no working group is appropriate, the proposal may go to the Science Council directly via the chairs.  Such a project is work that is intended to result in a journal publication after a fixed term, or a small set of related publications or similar product.  There are three categories for projects:
+Any Collaboration member may propose a Collaboration research project to an appropriate Analysis Working Group or Technical Working Group.  Such a project is work that is intended to result in a journal publication after a fixed term, or a small set of related publications.  There are three categories for projects:
 \begin{enumerate}
-\item \textbf{Key Projects} represent the main science goals of the Collaboration (or forecasts for those main science goals), where the Collaboration must speak with a single voice.  
-\item \textbf{Science Data Projects}  represent other science goals and use Collaboration science data.  
-\item \textbf{Technical Reports and Non-key-project Forecasts} are Collaboration-vetted projects that do not require Collaboration science data and are not forecasts for key-project science goals. They may lead to a publication or conference proceeding.  
+  \item Projects that are designated as ``Key Projects'' represent the main science goals of the Collaboration (or forecasts for what we will achieve), where the Collaboration must speak with a single voice.  
+\item ``Non-key''  analysis projects represent other science goals and use Collaboration science data.  
+\item Other forecasts and technical reports are Collaboration-vetted projects that do not require Collaboration science data and may lead to a publication or conference proceeding.  
 \end{enumerate}
 The Science Council will maintain the list of Key Science topics, to be established prior to any projects being initiated.  Topics can be added to the Key Science paper list and reviewed in coordination with the Publication Board.
 
-The Publication Board shall maintain the template for project submission. This project proposal document designates  a project leader and team, and describes the project, its estimated completion date, and final products.  
+The Publication Board will establish the template for project submission.  The project proposal document will designate a project leader and team, and describe the project, its estimated completion date, and final products.  
 Projects led by thesis students will be given special consideration to protect them from competition within the Collaboration.  Projects that require joint work with an external collaboration will require a memorandum of understanding set up by the External Collaborators Committee that specifies authorship and publication policies for that work.  These should be as compatible as possible with the respective Collaboration policies.  Provisional Members and individual external collaborators may be suggested as team members.  The External Collaborators Committee must be consulted in the latter case, to determine if MOUs are required.  
 
 
 Work on Collaboration data should apply toward a Collaboration project: failure to submit a project at its initiation, or writing a paper on internal Collaboration data for submission when the data become public, will be considered a violation of the policy.  The same general type of analysis on subsequent observing seasons or data releases will be considered separate projects.
 
-Conference proceedings are subject to the same approval and review process as other works to ensure collaboration vetting.  However, collaboration members may submit an abstract to the conference to give a talk (with the assent of the Working Group coordinators and subject to approval by the Speakers Bureau) before the required proposal for the written contribution to the conference proceedings is submitted to the Science Council.  Approval of the talk does not confer automatic approval of the written contribution.
-
-After discussion, resolution of conflicts, and consensus within the Working Group, the Working Group coordinators will submit the project to the Science Council with a project category recommendation as a Key Project, Science Data Project, or Technical Report/Non-key-project Forecast Project.  At this time the Working Group coordinators will announce the proposal to the Collaboration for a two-week consideration period, for discussion and further resolution of conflicts.  Addressing overlap among projects may require revision of the proposed project, and will be negotiated by the Working Group coordinators, publication-project leaders, and Spokespersons.  Any Collaboration Members that wish to make defined and useful contributions to the project are welcome to join the team.  Disputes will be settled by the Working Group coordinators and Spokespersons as needed.  
+After discussion, resolution of conflicts, and consensus within the Working Group, the Working Group coordinators will submit the project to the Science Council with a project category recommendation as a Key Project, non-key project, or theory forecast/technical report.  At this time the Working Group coordinators will announce the proposal to the Collaboration for a two-week consideration period, for discussion and further resolution of conflicts.  Addressing overlap among projects may require revision of the proposed project, and will be negotiated by the Working Group coordinators, publication-project leaders, and Spokespersons.  Any Collaboration Members that wish to make defined and useful contributions to the project are welcome to join the team.  Disputes will be settled by the Working Group coordinators and Spokespersons as needed.  
 
 The Science Council may then approve the project or send it back to the Working Group for further revision.  In the event of a tie vote in the Science Council, the project is sent back.  When approved, the Publication Board will record the proposal in its project database, including its project category.  If there is any substantial change in the scope of a project as it matures, the Project Leader should adjust the project description accordingly, which will result in a new announcement and opportunity for Collaboration review.  After the definition of a project, its category can be reclassified only by unanimous written agreement of the project team and a supermajority vote of the Publication Board,  or by a supermajority vote of the GB.
 
-Project teams have the responsibility to carry projects to completion and publication.  The Publication Board will query the Working Group coordinators twice yearly for progress reports on all projects, and forward the results to the Science Council. These reports are due by February 1 and August 1. Any projects without progress for one year will be noted as ``inactive'' and will be dropped from the database if there is still no progress at the next review.
+Project teams have the responsibility to carry projects to completion and publication.  The Publication Board will query the Working Group coordinators twice yearly for progress reports on all projects, and forward the results to the Science Council.  Any projects without progress for one year will be noted as ``inactive'' and will be dropped from the database if there is still no progress at the next review.
 
 \subsection{Authorship}
 %\Comment{[Ed. note: Aside from the concept of ``Key science'' vs ``standard papers,'' the main dispute in this section relates to opt-in/opt-out as the default, or whether a weak opt-in is any better than an opt-out.]}
@@ -690,15 +697,12 @@ For the purposes of authorship, ``Active Members'' consist of Senior, Postdoctor
 \begin{enumerate}
 \item For Key Project papers, all Active Members of the Collaboration and all Legacy Members will automatically be placed on the author list.  The author list will start with ``The \collabname\ Collaboration'' and otherwise be alphabetical, unless the Publication Board agrees that the paper should be submitted to a journal which requires the first author to be an individual.  In that case, the author list will be alphabetical.
   The Membership Board will provide the current list of eligible Active and Legacy Members to the Publication Board. Anyone who chooses to opt out of authorship for a given Key Project paper must  notify the Publication Board.
-For key papers initiated after July 1, 2020,
-    the collaboration will provide a dedicated email address as the point of contact in lieu of a corresponding author. In rare circumstances, the Publication Board may approve an acknowledgment of authors who made exceptional contributions to the paper, based on recommendations from the project team, working group coordinators, and other members of the collaboration.
-  
-\item For Science Data Project papers, the author list will be two-tiered.
+\item For non-key project papers, the author list will be two-tiered.
 %  The first tier will typically consist of untenured (or equivalent) members of the project team, ordered according to their preference.  (The publication panel can allow exceptions for senior scientists in the first tier in rare cases when justified by their contribution.)
   Project teams may organize the first author tier as appropriate for the paper, and although not required, conventionally the tenured members of the project team will appear in the second, alphabetical tier of authors.
   %The project leader will typically be the first author.
   The second tier will consist of all active members and legacy members that choose to opt in online after an email notification.  The final line of the author list will be ``The \collabname\ Collaboration.''
-  \item For technical reports and non-key-project forecasting papers , the author list will consist of the project team only, plus any Collaboration members that contributed to the study, as determined by the project team and appropriate Working Group coordinators, unless those authors opt out.  The author list should be ordered according to the preference of the project team, followed by ``for the \collabname\ Collaboration.''  For conference proceedings, the author list may be the single person who presented.
+  \item For other forecasts and technical reports, the author list will consist of the project team only, plus any Collaboration members that contributed to the study, as determined by the project team and appropriate Working Group coordinators, unless those authors opt out.  The author list should be ordered according to the preference of the project team, followed by ``for the \collabname\ Collaboration.''  For conference proceedings, the author list may be the single person who presented.
 \end{enumerate}
 
 In rare cases, a Senior Member may recommend authorship for an undergraduate student, graduate student, engineer or technician who is not a Collaboration member.  The Senior Member must petition the project team and the appropriate Working Group coordinators with a written description of the critical work done by the suggested author. 
@@ -707,11 +711,9 @@ Any disputes regarding authorship will be resolved by the Publication Board with
 \subsection{Collaboration Review and Paper Submission Process}
 %\Comment{[Ed. note: the timing of the formation of the review team with respect to collaboration-wide review is a point of debate.  Some feel that the reviewers should be assigned early, so that they can iterate more with the authors on the paper.  Others feel the assignment of the editors should only happen at the beginning of the collaboration-wide formal review, otherwise the review process is too closed and not democratic.  The scheme below has a mix of these features.]}
  
-The project leader and the project team have the responsibility to draft the publication based on their research.  All Collaboration papers will have a title following the template, ``\collabname: \textit{results of amazing research}.''  These papers will be developed in coordination with the relevant Working Groups, and kept in a repository that is visible to the whole Collaboration.  Any Collaboration member may comment on the project at any time.
-All \collabname\ publications, including proceedings and theses, must include a standard acknowledgment, agreed to and updated by the Governing Board, and made available by the Publication Board.  The Collaboration will pay the page charges for Key Project papers. For all other papers, the page charges are the responsibility of the authors.
+The project leader and the project team have the responsibility to draft the publication based on their research.  All Collaboration papers will have a title following the template, ``\collabname: \textit{results of amazing research}.''  These papers will be developed in coordination with the relevant Working Groups, and kept in a repository that is visible to the whole Collaboration.  Any Collaboration member may comment on the project at any time.  When the paper matures to an advanced draft, the Working Group coordinators will request that the Publication Board form an internal review committee.  
 
-
-When the paper matures to an advanced draft, the Working Group coordinators will request that the Publication Board form an internal review committee. This internal review committee consists of a primary and a secondary reviewer who have the responsibility to ensure that the Collaboration's publications are of uniform and high quality.  The reviewers are not current members of the Publication Board, but the Publication Board assigns one of its members to oversee the review of the paper as a rapporteur.  At least one of the reviewers or rapporteur should be a senior scientist who can insulate junior participants (whether authors, reviewers, or rapporteurs) from unfair criticism, if it occurs.
+This internal review committee consists of a primary and a secondary reviewer who have the responsibility to ensure that the Collaboration's publications are of uniform and high quality.  The reviewers are not current members of the Publication Board, but the Publication Board assigns one of its members to oversee the review of the paper as a rapporteur.  At least one of the reviewers or rapporteur should be a senior scientist who can insulate junior participants (whether authors, reviewers, or rapporteurs) from unfair criticism, if it occurs.
 
 The Publication Board will notify the full Collaboration that the internal review committee has formed.  Collaboration members may comment on the draft at any time, but when the authors are ready, the Publication Board will send an announcement of a formal three-week comment period.  After this comment period, the reviewers will provide a written report on the paper to the authors and Publication Board.
 
@@ -732,36 +734,39 @@ In total, all projects/papers will have four formal public announcements to the 
 (4) when the call goes out for final reading before submission.
   Projects will also naturally be discussed in plenary teleconference calls, progress reviews, and Working Group reports.
 
-For all papers submitted for publication to refereed journals, referee comments are to be posted to a centralized location maintained by the Publication Board, along with authors' responses. If revisions are needed, the Publication Board will determine whether or not the revisions are minor or major. In the case of major revisions, the revised paper will then be sent to the original internal review committee for review (in general no longer than three weeks). Once approved by the original internal review team, there will be a week-long collaboration-wide public comment period. After this period, the Publication Board will vote to approve the changes and resubmit, considering the recommendation from the original internal review team.
+All \collabname\ publications, including proceedings and theses, must include a standard acknowledgment, agreed to and updated by the Governing Board, and made available by the Publication Board.  The Collaboration will pay the page charges for Key Project papers. For all other papers, the page charges are the responsibility of the authors.
 
 Any disputes regarding the review process will be resolved by the Publication Board with the Spokespersons providing tie-breaking votes if necessary. In the case of a time-sensitive discovery, the review period may be shortened by unanimous consent of the Publication Board.
 
 Graduate thesis and dissertation documents are exempted from Collaboration review, but related publications (e.g.~developed from an individual chapter) are subject to review.
 
 \subsection{Talks and Public Communications}
+%\Comment{[Ed. note: This is based on the non-controversial interim policy.]}
 
-The role of the Speakers Bureau is to help Collaboration members give more and better talks in support of the Collaboration.  The Speakers Bureau also helps to ensure that talks get distributed among the Collaboration Members in a way that reflects the contributions of different members to the collaboration, the desire to promote junior members, and equity of opportunities to give talks. The duties of the Speakers Bureau are to:
+The role of the Speakers Bureau is to help Collaboration members give more and better talks in support of the Collaboration. In additon, the role of the Speakers Bureau is to ensure that talks get distributed among the Collaboration Members in a way that reflects the contributions of different members to the collaboration, their career status and the desire to promote junior members, and equity of opportunities to give talks. The duties of the Speakers Bureau are to:
 \begin{itemize}
-\item Maintain a list of relevant meetings, solicit invitations to conferences and identify good venues for contributed talks.
+\item Solicit invitations to conferences and identify good venues for contributed talks.
 \item Actively solicit speakers for invitations to notable conferences with no volunteer speakers. Priority and consideration should be given to the teams from projects where alphabetical author lists may obscure their roles. 
-\item Promptly respond to requests for speakers from conference organizers and act as a point-of-contact for people who want some \collabname\ speaker but do not have specific ideas. The mailing list is the most appropriate way to contact the Speakers Bureau.
+\item Promptly respond to requests for speakers from conference organizers and act as a point-of-contact for people who want some \collabname\ speaker but do not have specific ideas.
 \item Serve as a clearinghouse for talk invitations forwarded from any member.
 \item Curate a library of standard plots and slides for speakers to use in talks.
 \item Maintain records of all presentation given in the name of the Collaboration and a library of past \collabname\  talks.
-\item Address overlap from multiple requests to give talks on the same subject at the same conference, ideally by suggesting focus changes to make them on different topics. Talk prioritization should reflect the committee's best judgment, and should consider contributions to the topic in question, career status, whether the speaker was invited, and other similar factors.
+\item Address overlap from multiple requests to give talks on the same subject at the same conference, ideally by suggesting focus changes to make them on different topics. Talk prioritization will be at the committee's best judgment, but should reflect contributions to the topic in question, career status, whether the speaker was invited, and other similar factors.
 \end{itemize}
 
 
-Any Collaboration Member invited to give a talk with a substantial component focused on \collabname, (e.g., on the instrument, projections or science results) at a conference or workshop must forward that request upon receipt and before acceptance to the Speakers Bureau's mailing list.  The Speakers Bureau will work with the invited Member to determine whether the invited Member should reply positively to the request or with a suggestion of a more appropriate Member. In their deliberations, the Speakers Bureau and invited Member should consider
-the contributions of various members to the collaboration, the desire to promote junior members, and the fair distribution of opportunities to give talks. The Speakers Bureau should consult with appropriate Working Groups for feedback.
+Any Collaboration Member invited to give a talk with a substantial component focused on \collabname, (e.g., on the instrument, projections or science results) at a conference or workshop must forward that request upon receipt and before acceptance to the Speakers Bureau.  The Speakers Bureau will work with the invited Member to determine whether the invited Member should reply to the request with the suggestion that a more appropriate Member be invited to give the talk. In their deliberations, the Speakers Bureau and invited Member should consider
+the contributions of various members to the collaboration, the desire to promote junior members, and the fair distribution of opportunities to give talks.
+%\sout{Any member invited to give a talk at a conference or workshop must forward that request, upon receipt, to the Speakers Bureau.  The Speakers Bureau will determine whether an alternate person is more appropriate to give the talk considering the contributions of various members to the collaboration, the desire to promote junior members, and the fair distribution of opportunities to give talks.}
 
+%\textcolor{blue}{
 For approved conference and workshop talks, Collaboration Members must send abstracts and titles to the Speakers Bureau to allow them to be posted at least three days prior to submission, or as soon as possible in the event of last-minute invitations. For these talks, slides must be sent to the Speakers Bureau to allow them to be posted at least one week before being presented and should include ``for the \collabname\ Collaboration" on the title slide. %}
 
-For talks that will lead to a written contribution to a conference proceedings, the abstract must additionally be approved by the appropriate working group coordinators.  As noted in \S\ref{sec:pubprop}, the written contribution must be approved separately through the regular publication proposal and review process, but the speaker may submit the conference abstract before completing the required proposal for the written contribution.
-
+%\textcolor{blue}{
 For talks not in the above category, such as workshop or conference talks without a substantial component on \collabname, or colloquia or seminars, Collaboration Members should also notify the Speakers Bureau of the 
-invitations. 
-This ensures that the Speakers Bureau has a chance to address overlapping talk requests or locate another appropriate speaker in the case of declined invitations.  The talks policy applies to all workshops, meetings, colloquia, public lectures, and seminars.  The Speakers Bureau need not be informed of talks on other subjects that contain brief advertisements for \collabname\ (e.g.~a few slides with key parameter constraints) or of invited presentations that must remain confidential for programmatic reasons (e.g.~certain agency reviews or presentations to private foundations or donors).
+invitations. %} 
+% \textcolor{\markcolor}{ \sout{To give talks not in the above category, a Collaboration member must also notify the Speakers Bureau.}} 
+This ensures that the Speakers Bureau has a chance to address overlapping talk requests or locate another appropriate speaker in the case of declined invitations.  The talks policy applies to all workshops, meetings, colloquia, public lectures, and seminars.  The Speakers Bureau need not be informed of talks on other subjects that contain brief advertisements for \collabname\  or of invited presentations that must remain confidential for programmatic reasons (e.g.~certain agency reviews or presentations to private foundations or donors).
 
 %Final public oral presentations for thesis student have greater flexibility and may show unreleased data, but it is the responsibility of the student and advisor to maintain confidentiality of results.
 
@@ -816,7 +821,7 @@ ombudsperson role
 \end{itemize}
 
 \subsection{Selection}
-Ombudsperson candidates will be self-nominated.  The Ombudspersons will be selected by the Spokespersons and ratified by the GB.
+Ombudsperson candidates will be self-nominated \textcolor{\markcolor} {after solicitation of nominations from the full Collaboration}.  The Ombudspersons will be selected by the Spokespersons and ratified by the GB.
 
 
 \section{Amendments to Bylaws}
