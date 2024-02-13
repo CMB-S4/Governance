@@ -10,6 +10,8 @@
 \usepackage{ulem}
 \usepackage{ifthen}
 
+\usepackage{longtable}
+
 \newboolean{markup}
 
 \textheight = 522pt
@@ -52,10 +54,11 @@
 
 \newpage
 
-\begin{table}[ht!]
+\begin{longtable}{| l | p{3.7in} | c | c |}
+%\begin{table}[ht!]
 %\caption{Version Control Table.  The version number is given as $X$.$Y$, where major amendments are indicated with  increments to $X$, while minor ones increment $Y$. }
-\begin{center}
-\begin{tabular}{| l | p{3.7in} | c | c |}
+%\begin{center}
+%\begin{tabular}{| l | p{3.7in} | c | c |}
 \hline
 &  & {\bf Date} & {\bf Date}  \\
 {\bf Version}  &  \hspace{1.0in} {\bf Purpose/Changes} & {\bf Proposed} & {\bf Ratified} \\
@@ -71,14 +74,15 @@
 1.8 & Amendments to Sections 1.2, 5.1, 7, and 7.2 and Figure 1 to redefine Technical Working Groups, preserving the intent of unamended Sections 7.2, 9.2, and 9.3 &  & 04/22/22\\ \hline
 1.9 & Amendments to Section 8 to clarify membership types, status qualifiers, and processes & & \\ \hline
 1.10 & Amendments to Sections 2,3.1,3.3,3.4,6.3,7.3-7.7,10.2 to address minor inconsistencies and extend GB attendance requirements to account for extenuating circumstances & 09/15/2021 & 04/22/22 \\ \hline
-1.11 & Amendments to Sections 6.3, 8.2, 9.4 to address minor inconsistencies: representation requirements for full GB board, data access granted to Project member, actions to fulfil categories for GB, authorship rights for provisional members. Amendments to Sections 9 to address minor inconsistencies raised during collaboration review: the Section refers to publication planning, managing, preparation, submission, while the word "project" is used elsewhere with different meanings, and therefore mentions to projects has been removed from this Section and substituted with approriate ones & 04/05/2023 & 03/12/23 \\ \hline
-& & &\\ \hline
-\end{tabular}
-\end{center}
-\label{tab:version}
-\end{table}
+1.11 & Amendments to Sections 6.3, 8.2, 9.4 to address minor inconsistencies: representation requirements for full GB board, data access granted to Project member, actions to fulfil categories for GB, authorship rights for provisional members. Amendments to Sections 9 to address minor inconsistencies raised during collaboration review: the Section refers to publication planning, managing, preparation, submission, while the word "project" is used elsewhere with different meanings, and therefore mentions to projects has been removed from this Section and substituted with appropriate ones & 04/05/2023 & 03/12/23 \label{tab:version} \\ \hline
+%& & &\\ \hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+\end{longtable}
 
-\thispagestyle{empty}
+
+%\thispagestyle{empty}
 
 \newpage
 
